@@ -8,7 +8,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/modules/data.js"></script>
-    <!--<script src="https://code.highcharts.com/modules/series-label.js"></script>-->
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/export-data.js"></script>
 </head>
@@ -21,11 +20,16 @@
         <option value="100Free">100 Free</option>
         <option value="200Free">200 Free</option>
         <option value="500Free">500 Free</option>
-        <option value="100IM">100 IM</option>
-        <option value="200IM">200 IM</option>
+        <option value="50Back">50 Back</option>
+        <option value="100Back">100 Back</option>
         <option value="50Breast">50 Breast</option>
         <option value="100Breast">100 Breast</option>
         <option value="200Breast">200 Breast</option>
+        <option value="50Fly">50 Fly</option>
+        <option value="100Fly">100 Fly</option>
+        <option value="100IM">100 IM</option>
+        <option value="200IM">200 IM</option>
+
     </select>
 
     <div id="container" style="width: 100%; height:400px;"></div>
@@ -145,41 +149,32 @@
                             [Date.UTC(2018, 2, 16), 345650],
                             [Date.UTC(2018, 10, 3), 353570]
                         ]);
-                } else if (selVal == "100IM") {
+                } else if (selVal == "50Back") {
                     myChart.series[0].update({
-                            name: "100 IM"
+                            name: "50 Back"
                         }, false),
                         myChart.series[0].setData([
-                            [Date.UTC(2015, 11, 13), 89130],
-                            [Date.UTC(2016, 1, 12), 88990],
-                            [Date.UTC(2016, 1, 20), 84610],
-                            [Date.UTC(2016, 1, 27), 87290],
-                            [Date.UTC(2016, 9, 22), 83390],
-                            [Date.UTC(2016, 10, 12), 82190],
-                            [Date.UTC(2016, 11, 11), 84080],
-                            [Date.UTC(2017, 0, 13), 82580],
-                            [Date.UTC(2017, 1, 10), 80120],
-                            [Date.UTC(2017, 1, 25), 79100],
-                            [Date.UTC(2017, 2, 17), 73370],
-                            [Date.UTC(2017, 9, 28), 76270],
-                            [Date.UTC(2017, 10, 11), 74700],
-                            [Date.UTC(2017, 11, 9), 71290],
-                            [Date.UTC(2018, 0, 11), 71530],
-                            [Date.UTC(2018, 1, 10), 71480],
-                            [Date.UTC(2018, 1, 24), 68760],
-                            [Date.UTC(2018, 9, 27), 67880],
-                            [Date.UTC(2018, 10, 3), 67690],
-                            [Date.UTC(2018, 10, 10), 68260]
+                            [Date.UTC(2016, 0, 17), 41700],
+                            [Date.UTC(2016, 1, 27), 39430],
+                            [Date.UTC(2016, 10, 12), 37700],
+                            [Date.UTC(2017, 0, 6), 36640],
+                            [Date.UTC(2017, 0, 14), 38630],
+                            [Date.UTC(2017, 1, 12), 37960],
+                            [Date.UTC(2017, 2, 17), 34720],
+                            [Date.UTC(2017, 10, 11), 35360],
+                            [Date.UTC(2017, 11, 9), 35250],
+                            [Date.UTC(2018, 0, 27), 35670],
+                            [Date.UTC(2018, 11, 8), 32610]
                         ]);
-                } else if (selVal == "200IM") {
+                } else if (selVal == "100Back") {
                     myChart.series[0].update({
-                            name: "200 IM"
+                            name: "100 Back"
                         }, false),
                         myChart.series[0].setData([
-                            [Date.UTC(2017, 11, 9), 166630],
-                            [Date.UTC(2018, 0, 11), 153730],
-                            [Date.UTC(2018, 9, 27), 152880],
-                            [Date.UTC(2018, 11, 8), 147570]
+                            [Date.UTC(2016, 11, 11), 84630],
+                            [Date.UTC(2017, 1, 11), 83440],
+                            [Date.UTC(2017, 11, 17), 75670],
+                            [Date.UTC(2018, 0, 14), 77460]
                         ]);
                 } else if (selVal == "50Breast") {
                     myChart.series[0].update({
@@ -215,6 +210,27 @@
                         myChart.series[0].setData([
                             [Date.UTC(2016, 10, 14), 168190]
                         ]);
+                } else if (selVal == "50Fly") {
+                    myChart.series[0].update({
+                            name: "50 Fly"
+                        }, false),
+                        myChart.series[0].setData([
+                            [Date.UTC(2016, 9, 22), 40480],
+                            [Date.UTC(2016, 10, 12), 41530],
+                            [Date.UTC(2017, 9, 28), 35580],
+                            [Date.UTC(2018, 1, 10), 32270],
+                            [Date.UTC(2018, 9, 27), 31590],
+                            [Date.UTC(2018, 10, 10), 32730],
+                            [Date.UTC(2019, 0, 5), 30680],
+                        ]);
+                } else if (selVal == "100Fly") {
+                    myChart.series[0].update({
+                            name: "100 Fly"
+                        }, false),
+                        myChart.series[0].setData([
+                            [Date.UTC(2018, 0, 14), 83130],
+                            [Date.UTC(2018, 11, 8), 69610]
+                        ]);
                 } else if (selVal == "50Free") {
                     myChart.series[0].update({
                             name: "50 Free"
@@ -242,6 +258,42 @@
                             [Date.UTC(2018, 9, 27), 27720],
                             [Date.UTC(2018, 10, 10), 28420],
                             [Date.UTC(2018, 11, 8), 27260]
+                        ]);
+                } else if (selVal == "100IM") {
+                    myChart.series[0].update({
+                            name: "100 IM"
+                        }, false),
+                        myChart.series[0].setData([
+                            [Date.UTC(2015, 11, 13), 89130],
+                            [Date.UTC(2016, 1, 12), 88990],
+                            [Date.UTC(2016, 1, 20), 84610],
+                            [Date.UTC(2016, 1, 27), 87290],
+                            [Date.UTC(2016, 9, 22), 83390],
+                            [Date.UTC(2016, 10, 12), 82190],
+                            [Date.UTC(2016, 11, 11), 84080],
+                            [Date.UTC(2017, 0, 13), 82580],
+                            [Date.UTC(2017, 1, 10), 80120],
+                            [Date.UTC(2017, 1, 25), 79100],
+                            [Date.UTC(2017, 2, 17), 73370],
+                            [Date.UTC(2017, 9, 28), 76270],
+                            [Date.UTC(2017, 10, 11), 74700],
+                            [Date.UTC(2017, 11, 9), 71290],
+                            [Date.UTC(2018, 0, 11), 71530],
+                            [Date.UTC(2018, 1, 10), 71480],
+                            [Date.UTC(2018, 1, 24), 68760],
+                            [Date.UTC(2018, 9, 27), 67880],
+                            [Date.UTC(2018, 10, 3), 67690],
+                            [Date.UTC(2018, 10, 10), 68260]
+                        ]);
+                } else if (selVal == "200IM") {
+                    myChart.series[0].update({
+                            name: "200 IM"
+                        }, false),
+                        myChart.series[0].setData([
+                            [Date.UTC(2017, 11, 9), 166630],
+                            [Date.UTC(2018, 0, 11), 153730],
+                            [Date.UTC(2018, 9, 27), 152880],
+                            [Date.UTC(2018, 11, 8), 147570]
                         ]);
                 }
             });
