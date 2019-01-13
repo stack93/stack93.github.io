@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Swim Times</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/modules/data.js"></script>
@@ -13,14 +14,21 @@
 </head>
 
 <body>
-
-    <div id="container" style="width: 100%; height:400px;"></div>
+    <h1>Evan Tack</h1>
 
     <select id="selectData">
         <option value="50Free" selected="selected">50 Free</option>
         <option value="100Free">100 Free</option>
         <option value="200Free">200 Free</option>
+        <option value="500Free">500 Free</option>
+        <option value="100IM">100 IM</option>
+        <option value="200IM">200 IM</option>
+        <option value="50Breast">50 Breast</option>
+        <option value="100Breast">100 Breast</option>
+        <option value="200Breast">200 Breast</option>
     </select>
+
+    <div id="container" style="width: 100%; height:400px;"></div>
 
     <script>
         $(function() {
@@ -29,7 +37,7 @@
                     type: 'spline',
                 },
                 title: {
-                    text: 'Evan Tack Times'
+                    text: 'Meet Times'
                 },
                 credits: {
                     enabled: false
@@ -89,7 +97,6 @@
                 }]
             });
 
-            // The select action
             $("#selectData").on('change', function() {
                 var selVal = $("#selectData").val();
                 if (selVal == "100Free" || selVal == '') {
@@ -128,6 +135,86 @@
                             [Date.UTC(2018, 9, 27), 133540],
                             [Date.UTC(2018, 10, 10), 133810]
                         ]);
+                } else if (selVal == "500Free") {
+                    myChart.series[0].update({
+                            name: "500 Free"
+                        }, false),
+                        myChart.series[0].setData([
+                            [Date.UTC(2017, 10, 11), 383060],
+                            [Date.UTC(2018, 1, 24), 369960],
+                            [Date.UTC(2018, 2, 16), 345650],
+                            [Date.UTC(2018, 10, 3), 353570]
+                        ]);
+                } else if (selVal == "100IM") {
+                    myChart.series[0].update({
+                            name: "100 IM"
+                        }, false),
+                        myChart.series[0].setData([
+                            [Date.UTC(2015, 11, 13), 89130],
+                            [Date.UTC(2016, 1, 12), 88990],
+                            [Date.UTC(2016, 1, 20), 84610],
+                            [Date.UTC(2016, 1, 27), 87290],
+                            [Date.UTC(2016, 9, 22), 83390],
+                            [Date.UTC(2016, 10, 12), 82190],
+                            [Date.UTC(2016, 11, 11), 84080],
+                            [Date.UTC(2017, 0, 13), 82580],
+                            [Date.UTC(2017, 1, 10), 80120],
+                            [Date.UTC(2017, 1, 25), 79100],
+                            [Date.UTC(2017, 2, 17), 73370],
+                            [Date.UTC(2017, 9, 28), 76270],
+                            [Date.UTC(2017, 10, 11), 74700],
+                            [Date.UTC(2017, 11, 9), 71290],
+                            [Date.UTC(2018, 0, 11), 71530],
+                            [Date.UTC(2018, 1, 10), 71480],
+                            [Date.UTC(2018, 1, 24), 68760],
+                            [Date.UTC(2018, 9, 27), 67880],
+                            [Date.UTC(2018, 10, 3), 67690],
+                            [Date.UTC(2018, 10, 10), 68260]
+                        ]);
+                } else if (selVal == "200IM") {
+                    myChart.series[0].update({
+                            name: "200 IM"
+                        }, false),
+                        myChart.series[0].setData([
+                            [Date.UTC(2017, 11, 9), 166630],
+                            [Date.UTC(2018, 0, 11), 153730],
+                            [Date.UTC(2018, 9, 27), 152880],
+                            [Date.UTC(2018, 11, 8), 147570]
+                        ]);
+                } else if (selVal == "50Breast") {
+                    myChart.series[0].update({
+                            name: "50 Breast"
+                        }, false),
+                        myChart.series[0].setData([
+                            [Date.UTC(2016, 10, 14), 51840],
+                            [Date.UTC(2017, 0, 7), 44600],
+                            [Date.UTC(2017, 1, 10), 43240],
+                            [Date.UTC(2017, 9, 28), 40550],
+                            [Date.UTC(2018, 0, 14), 39580],
+                            [Date.UTC(2018, 2, 16), 36480],
+                            [Date.UTC(2018, 9, 27), 36050],
+                            [Date.UTC(2018, 11, 8), 36900]
+                        ]);
+                } else if (selVal == "100Breast") {
+                    myChart.series[0].update({
+                            name: "100 Breast"
+                        }, false),
+                        myChart.series[0].setData([
+                            [Date.UTC(2017, 10, 17), 85230],
+                            [Date.UTC(2018, 0, 11), 82240],
+                            [Date.UTC(2018, 0, 28), 81280],
+                            [Date.UTC(2018, 2, 16), 76600],
+                            [Date.UTC(2018, 9, 27), 78280],
+                            [Date.UTC(2018, 10, 3), 78690],
+                            [Date.UTC(2018, 10, 10), 79880]
+                        ]);
+                } else if (selVal == "200Breast") {
+                    myChart.series[0].update({
+                            name: "200 Breast"
+                        }, false),
+                        myChart.series[0].setData([
+                            [Date.UTC(2016, 10, 14), 168190]
+                        ]);
                 } else if (selVal == "50Free") {
                     myChart.series[0].update({
                             name: "50 Free"
@@ -159,10 +246,14 @@
                 }
             });
 
-
         });
     </script>
 
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
 
 </html>
