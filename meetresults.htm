@@ -1,0 +1,2149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Swim Times</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/data.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/export-data.js"></script>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-light bg-light">
+    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" id="pills-Evan-tab" data-toggle="pill" href="#pills-Evan" role="tab" aria-controls="pills-Evan" aria-selected="true">Evan</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="pills-Avery-tab" data-toggle="pill" href="#pills-Avery" role="tab" aria-controls="pills-Avery" aria-selected="false">Avery</a>
+      </li>
+    </ul>
+    <figure class="figure">
+      <img src="usa-swimming-logo.png" class="figure-img img-fluid rounded" alt="..." style="width:60px;height:48px;">
+    </figure>
+  </nav>
+
+  <div class="tab-content p-4" id="pills-tabEvan">
+    <div class="tab-pane fade show active " id="pills-Evan" role="tabpanel" aria-labelledby="pills-Evan-tab" >
+
+      <select id="selectStroke">
+        <option value="50Free" selected="selected">50 Free</option>
+        <option value="100Free">100 Free</option>
+        <option value="200Free">200 Free</option>
+        <option value="500Free">500 Free</option>
+        <option value="50Back">50 Back</option>
+        <option value="100Back">100 Back</option>
+        <option value="50Breast">50 Breast</option>
+        <option value="100Breast">100 Breast</option>
+        <option value="200Breast">200 Breast</option>
+        <option value="50Fly">50 Fly</option>
+        <option value="100Fly">100 Fly</option>
+        <option value="100IM">100 IM</option>
+        <option value="200IM">200 IM</option>
+      </select>
+
+      <div id="container" style="width: 100%; height:400px;"></div>
+
+      <div id="50Free" class="stroke" style="display">
+        <table class="table table-hover table-sm">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Age</th>
+              <th>Time Standard</th>
+              <th>Meet</th>
+              <th>Swim Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>27.26</td>
+              <td>11</td>
+              <td>A</td>
+              <td>FFYS Holiday Classic</td>
+              <td>12/8/18</td>
+            </tr>
+            <tr>
+              <td>28.42</td>
+              <td>11</td>
+              <td>A</td>
+              <td>NOW SYOA</td>
+              <td>11/10/18</td>
+            </tr>
+            <tr>
+              <td>27.72</td>
+              <td>11</td>
+              <td>A</td>
+              <td>BBD Fall Classic</td>
+              <td>10/27/18</td>
+            </tr>
+            <tr>
+              <td>26.82</td>
+              <td>10</td>
+              <td>AAAA</td>
+              <td>USS States</td>
+              <td>3/16/18</td>
+            </tr>
+            <tr>
+              <td>27.26</td>
+              <td>10</td>
+              <td>AAAA</td>
+              <td>Y States</td>
+              <td>2/24/18</td>
+            </tr>
+            <tr>
+              <td>28.01</td>
+              <td>10</td>
+              <td>AAA</td>
+              <td>Circle City Classic</td>
+              <td>1/28/18</td>
+            </tr>
+            <tr>
+              <td>29.33</td>
+              <td>10</td>
+              <td>AA</td>
+              <td>Marlins Invitational</td>
+              <td>1/14/18</td>
+            </tr>
+            <tr>
+              <td>28.56</td>
+              <td>10</td>
+              <td>AAA</td>
+              <td>Mid States All Star</td>
+              <td>1/7/18</td>
+            </tr>
+            <tr>
+              <td>28.34</td>
+              <td>10</td>
+              <td>AAA</td>
+              <td>FFYS Holiday Classic</td>
+              <td>12/19/17</td>
+            </tr>
+            <tr>
+              <td>29.60</td>
+              <td>10</td>
+              <td>AA</td>
+              <td>BBD Fall Classic</td>
+              <td>11/11/17</td>
+            </tr>
+            <tr>
+              <td>29.76</td>
+              <td>10</td>
+              <td>AA</td>
+              <td>USS States</td>
+              <td>10/28/17</td>
+            </tr>
+            <tr>
+              <td>29.76</td>
+              <td>10</td>
+              <td>AA</td>
+              <td>USS States</td>
+              <td>10/28/17</td>
+            </tr>
+            <tr>
+              <td>29.86</td>
+              <td>9</td>
+              <td>A</td>
+              <td>USS States</td>
+              <td>3/17/17</td>
+            </tr>
+            <tr>
+              <td>30.93</td>
+              <td>9</td>
+              <td>A</td>
+              <td>Y States</td>
+              <td>2/25/17</td>
+            </tr>
+            <tr>
+              <td>30.78</td>
+              <td>9</td>
+              <td>A</td>
+              <td>Y Clusters</td>
+              <td>2/12/17</td>
+            </tr>
+            <tr>
+              <td>30.92</td>
+              <td>9</td>
+              <td>A</td>
+              <td>Last Train to Indy</td>
+              <td>1/7/17</td>
+            </tr>
+            <tr>
+              <td>32.57</td>
+              <td>9</td>
+              <td>B</td>
+              <td>BBD Holiday Invitational</td>
+              <td>12/11/16</td>
+            </tr>
+            <tr>
+              <td>31.68</td>
+              <td>9</td>
+              <td>B</td>
+              <td>BBD Holiday Invitational</td>
+              <td>12/3/16</td>
+            </tr>
+            <tr>
+              <td>32.45</td>
+              <td>8</td>
+              <td>B</td>
+              <td>9&10 Y States</td>
+              <td>2/27/16</td>
+            </tr>
+            <tr>
+              <td>32.80</td>
+              <td>8</td>
+              <td>B</td>
+              <td>8&U Y States</td>
+              <td>2/20/16</td>
+            </tr>
+            <tr>
+              <td>33.51</td>
+              <td>8</td>
+              <td>BB</td>
+              <td>FFYS Holiday Classic</td>
+              <td>12/12/15</td>
+            </tr>
+            <tr>
+              <td>36.01</td>
+              <td>8</td>
+              <td>B</td>
+              <td>NOW SYOA</td>
+              <td>11/14/15</td>
+            </tr>
+            <tr>
+              <td>37.58</td>
+              <td>8</td>
+              <td>B</td>
+              <td>FLY Fall Classic</td>
+              <td>11/7/15</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="100Free" class="stroke" style="display:none">
+        <table class="table table-hover table-sm">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Age</th>
+              <th>Time Standard</th>
+              <th>Meet</th>
+              <th>Swim Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>58.42</td>
+              <td>11</td>
+              <td>A</td>
+              <td>Last Train to Indy</td>
+              <td>1/5/19</td>
+            </tr>
+            <tr>
+              <td>59.57</td>
+              <td>11</td>
+              <td>A</td>
+              <td>BBA IMX</td>
+              <td>11/3/18</td>
+            </tr>
+            <tr>
+              <td>59.94</td>
+              <td>11</td>
+              <td>A</td>
+              <td>BBD Fall Classic</td>
+              <td>10/27/18</td>
+            </tr>
+            <tr>
+              <td>58.84</td>
+              <td>10</td>
+              <td>AAAA</td>
+              <td>Circle City Classic</td>
+              <td>3/16/18</td>
+            </tr>
+            <tr>
+              <td>1:01.33</td>
+              <td>10</td>
+              <td>AAA</td>
+              <td>Circle City Classic</td>
+              <td>1/28/18</td>
+            </tr>
+            <tr>
+              <td>1:02.12</td>
+              <td>10</td>
+              <td>AAA</td>
+              <td>Mid States All Star</td>
+              <td>1/7/18</td>
+            </tr>
+            <tr>
+              <td>1:03.64</td>
+              <td>10</td>
+              <td>AAA</td>
+              <td>FFYS HC</td>
+              <td>12/9/17</td>
+            </tr>
+            <tr>
+              <td>1:03.22</td>
+              <td>9</td>
+              <td>AAA</td>
+              <td>USS States</td>
+              <td>3/7/17</td>
+            </tr>
+            <tr>
+              <td>1:05.47</td>
+              <td>9</td>
+              <td>AA</td>
+              <td>Y States</td>
+              <td>2/25/17</td>
+            </tr>
+            <tr>
+              <td>1:09.72</td>
+              <td>9</td>
+              <td>BB</td>
+              <td>Y Clusters</td>
+              <td>2/12/17</td>
+            </tr>
+            <tr>
+              <td>1:08.88</td>
+              <td>9</td>
+              <td>A</td>
+              <td>Marlins Invitational</td>
+              <td>1/13/17</td>
+            </tr>
+            <tr>
+              <td>1:06.39</td>
+              <td>9</td>
+              <td>A</td>
+              <td>Last Train to Indy</td>
+              <td>1/7/17</td>
+            </tr>
+            <tr>
+              <td>1:10.23</td>
+              <td>9</td>
+              <td>BB</td>
+              <td>BBD Holiday Invitational</td>
+              <td>12/3/16</td>
+            </tr>
+            <tr>
+              <td>1:15.93</td>
+              <td>8</td>
+              <td>BB</td>
+              <td>Y States</td>
+              <td>2/27/16</td>
+            </tr>
+            <tr>
+              <td>1:17.71</td>
+              <td>8</td>
+              <td>BB</td>
+              <td>MYM</td>
+              <td>1/15/16</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="200Free" class="stroke" style="display:none">
+        <table class="table table-hover table-sm">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Age</th>
+              <th>Time Standard</th>
+              <th>Meet</th>
+              <th>Swim Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2:13.81</td>
+              <td>11</td>
+              <td>BB</td>
+              <td>NOW SYOA</td>
+              <td>11/10/18</td>
+            </tr>
+            <tr>
+              <td>2:13.54</td>
+              <td>11</td>
+              <td>BB</td>
+              <td>BBD Fall Classic</td>
+              <td>10/27/18</td>
+            </tr>
+            <tr>
+              <td>2:08.94</td>
+              <td>10</td>
+              <td>AAAA</td>
+              <td>USS States</td>
+              <td>3/16/18</td>
+            </tr>
+            <tr>
+              <td>2:15.90</td>
+              <td>10</td>
+              <td>AAA</td>
+              <td>Circle City Classic</td>
+              <td>1/28/18</td>
+            </tr>
+            <tr>
+              <td>2:15.36</td>
+              <td>10</td>
+              <td>AAA</td>
+              <td>Mid States All Star</td>
+              <td>1/7/18</td>
+            </tr>
+            <tr>
+              <td>2:16.11</td>
+              <td>10</td>
+              <td>AAA</td>
+              <td>FFYS HC</td>
+              <td>12/9/17</td>
+            </tr>
+            <tr>
+              <td>2:25.48</td>
+              <td>10</td>
+              <td>A</td>
+              <td>NOW SYOA</td>
+              <td>11/11/17</td>
+            </tr>
+            <tr>
+              <td>2:36.00</td>
+              <td>9</td>
+              <td>BB</td>
+              <td>FFYS HC</td>
+              <td>12/11/16</td>
+            </tr>
+            <tr>
+              <td>2:40.99</td>
+              <td>9</td>
+              <td>BB</td>
+              <td>NOW SYOA</td>
+              <td>11/12/16</td>
+            </tr>
+        </table>
+      </div>
+
+      <div id="500Free" class="stroke" style="display:none">
+        <table class="table table-hover table-sm">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Age</th>
+              <th>Time Standard</th>
+              <th>Meet</th>
+              <th>Swim Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>5:53.57</td>
+              <td>11</td>
+              <td>A</td>
+              <td>BBA IMX</td>
+              <td>11/3/18</td>
+            </tr>
+            <tr>
+              <td>5:45.65</td>
+              <td>10</td>
+              <td>AAAA</td>
+              <td>USS States</td>
+              <td>3/16/18</td>
+            </tr>
+            <tr>
+              <td>6:09.96</td>
+              <td>10</td>
+              <td>AA</td>
+              <td>Y States</td>
+              <td>2/24/18</td>
+            </tr>
+            <tr>
+              <td>6:23.06</td>
+              <td>10</td>
+              <td>A</td>
+              <td>NOW SYOA</td>
+              <td>11/11/17</td>
+            </tr>
+        </table>
+      </div>
+      <div id="50Back" class="stroke" style="display:none">
+        <table class="table table-hover table-sm">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Age</th>
+              <th>Time Standard</th>
+              <th>Meet</th>
+              <th>Swim Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>32.61</td>
+              <td>11</td>
+              <td>BB</td>
+              <td>FFYS HC</td>
+              <td>12/8/18</td>
+            </tr>
+            <tr>
+              <td>35.67</td>
+              <td>10</td>
+              <td>A</td>
+              <td>Circle City Classic</td>
+              <td>1/28/18</td>
+            </tr>
+            <tr>
+              <td>35.25</td>
+              <td>10</td>
+              <td>AA</td>
+              <td>FFYS HC</td>
+              <td>12/9/17</td>
+            </tr>
+            <tr>
+              <td>35.36</td>
+              <td>10</td>
+              <td>A</td>
+              <td>NOW SYOA</td>
+              <td>11/11/17</td>
+            </tr>
+            <tr>
+              <td>34.72</td>
+              <td>9</td>
+              <td>AA</td>
+              <td>USS States</td>
+              <td>3/17/17</td>
+            </tr>
+            <tr>
+              <td>37.96</td>
+              <td>9</td>
+              <td>BB</td>
+              <td>Y Clusters</td>
+              <td>2/10/17</td>
+            </tr>
+            <tr>
+              <td>38.63</td>
+              <td>9</td>
+              <td>BB</td>
+              <td>Marlins Invitational</td>
+              <td>1/13/17</td>
+            </tr>
+            <tr>
+              <td>36.64</td>
+              <td>9</td>
+              <td>A</td>
+              <td>Last Train to Indy</td>
+              <td>1/7/17</td>
+            </tr>
+            <tr>
+              <td>37.70</td>
+              <td>9</td>
+              <td>A</td>
+              <td>NOW SYOA</td>
+              <td>11/12/16</td>
+            </tr>
+            <tr>
+              <td>41.70</td>
+              <td>8</td>
+              <td>BB</td>
+              <td>MYM</td>
+              <td>1/15/16</td>
+            </tr>
+        </table>
+      </div>
+      <div id="100Back" class="stroke" style="display:none">
+        <table class="table table-hover table-sm">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Age</th>
+              <th>Time Standard</th>
+              <th>Meet</th>
+              <th>Swim Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1:17.46</td>
+              <td>10</td>
+              <td>A</td>
+              <td>MCMA</td>
+              <td>1/14/18</td>
+            </tr>
+            <tr>
+              <td>1:15.67</td>
+              <td>10</td>
+              <td>AA</td>
+              <td>FFYS HC</td>
+              <td>12/9/17</td>
+            </tr>
+            <tr>
+              <td>1:23.44</td>
+              <td>9</td>
+              <td>BB</td>
+              <td>Y Clusters</td>
+              <td>2/10/17</td>
+            </tr>
+            <tr>
+              <td>1:24.63</td>
+              <td>9</td>
+              <td>BB</td>
+              <td>FFYS HC</td>
+              <td>12/11/16</td>
+            </tr>
+        </table>
+      </div>
+      <div id="50Breast" class="stroke" style="display:none">
+        <table class="table table-hover table-sm">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Age</th>
+              <th>Time Standard</th>
+              <th>Meet</th>
+              <th>Swim Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>36.90</td>
+              <td>11</td>
+              <td>BB</td>
+              <td>FFYS HC</td>
+              <td>12/8/18</td>
+            </tr>
+            <tr>
+              <td>36.05</td>
+              <td>11</td>
+              <td>A</td>
+              <td>BBD Fall Classic</td>
+              <td>10/27/18</td>
+            </tr>
+            <tr>
+              <td>36.18</td>
+              <td>10</td>
+              <td>AAA</td>
+              <td>USS States</td>
+              <td>3/16/18</td>
+            </tr>
+            <tr>
+              <td>39.58</td>
+              <td>10</td>
+              <td>A</td>
+              <td>MCMA</td>
+              <td>1/4/18</td>
+            </tr>
+            <tr>
+              <td>40.55</td>
+              <td>10</td>
+              <td>A</td>
+              <td>BBD Fall Classic</td>
+              <td>10/28/17</td>
+            </tr>
+            <tr>
+              <td>43.24</td>
+              <td>9</td>
+              <td>BB</td>
+              <td>Y Clusters</td>
+              <td>2/10/17</td>
+            </tr>
+            <tr>
+              <td>44.66</td>
+              <td>9</td>
+              <td>BB</td>
+              <td>Y Clusters</td>
+              <td>1/7/17</td>
+            </tr>
+            <tr>
+              <td>51.84</td>
+              <td>8</td>
+              <td>BB</td>
+              <td>FFYS HC</td>
+              <td>1/14/15</td>
+            </tr>
+        </table>
+      </div>
+      <div id="100Breast" class="stroke" style="display:none">
+        <table class="table table-hover table-sm">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Age</th>
+              <th>Time Standard</th>
+              <th>Meet</th>
+              <th>Swim Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1:19.88</td>
+              <td>11</td>
+              <td>BB</td>
+              <td>NOW SYOA</td>
+              <td>11/10/18</td>
+            </tr>
+            <tr>
+              <td>1:18.69</td>
+              <td>11</td>
+              <td>BB</td>
+              <td>BBA IMX</td>
+              <td>11/3/18</td>
+            </tr>
+            <tr>
+              <td>1:18.28</td>
+              <td>11</td>
+              <td>A</td>
+              <td>BBD Fall Classic</td>
+              <td>10/27/18</td>
+            </tr>
+            <tr>
+              <td>1:16.60</td>
+              <td>10</td>
+              <td>AAAA</td>
+              <td>USS States</td>
+              <td>3/16/18</td>
+            </tr>
+            <tr>
+              <td>1:21.28</td>
+              <td>10</td>
+              <td>AAA</td>
+              <td>Circle City Classic</td>
+              <td>1/28/18</td>
+            </tr>
+            <tr>
+              <td>1:22.24</td>
+              <td>10</td>
+              <td>AAA</td>
+              <td>Mid States All Star</td>
+              <td>1/7/18</td>
+            </tr>
+            <tr>
+              <td>1:25.23</td>
+              <td>10</td>
+              <td>AA</td>
+              <td>NOW SYOA</td>
+              <td>11/11/17</td>
+            </tr>
+        </table>
+      </div>
+      <div id="200Breast" class="stroke" style="display:none">
+        <table class="table table-hover table-sm">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Age</th>
+              <th>Time Standard</th>
+              <th>Meet</th>
+              <th>Swim Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2:48.19</td>
+              <td>11</td>
+              <td>BB</td>
+              <td>Last Train to Indy</td>
+              <td>1/5/19</td>
+            </tr>
+        </table>
+      </div>
+      <div id="50Fly" class="stroke" style="display:none">
+        <table class="table table-hover table-sm">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Age</th>
+              <th>Time Standard</th>
+              <th>Meet</th>
+              <th>Swim Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>30.68</td>
+              <td>11</td>
+              <td>A</td>
+              <td>Last Train to Indy</td>
+              <td>1/5/19</td>
+            </tr>
+            <tr>
+              <td>32.73</td>
+              <td>11</td>
+              <td>BB</td>
+              <td>NOW SYOA</td>
+              <td>11/10/18</td>
+            </tr>
+            <tr>
+              <td>31.59</td>
+              <td>11</td>
+              <td>BB</td>
+              <td>BBD Fall Classic</td>
+              <td>10/27/18</td>
+            </tr>
+            <tr>
+              <td>32.27</td>
+              <td>10</td>
+              <td>AA</td>
+              <td>Y Clusters</td>
+              <td>2/9/18</td>
+            </tr>
+            <tr>
+              <td>35.58</td>
+              <td>10</td>
+              <td>BB</td>
+              <td>BBD Fall Classic</td>
+              <td>10/28/17</td>
+            </tr>
+            <tr>
+              <td>41.53</td>
+              <td>9</td>
+              <td>B</td>
+              <td>NOW SYOA</td>
+              <td>11/12/16</td>
+            </tr>
+            <tr>
+              <td>40.48</td>
+              <td>9</td>
+              <td>BB</td>
+              <td>BBD Fall Classic</td>
+              <td>10/22/16</td>
+            </tr>
+        </table>
+      </div>
+      <div id="100Fly" class="stroke" style="display:none">
+        <table class="table table-hover table-sm">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Age</th>
+              <th>Time Standard</th>
+              <th>Meet</th>
+              <th>Swim Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1:09.51</td>
+              <td>11</td>
+              <td>A</td>
+              <td>FFYS HC</td>
+              <td>12/8/18</td>
+            </tr>
+            <tr>
+              <td>1:23.13</td>
+              <td>10</td>
+              <td>A</td>
+              <td>MCMA</td>
+              <td>1/14/18</td>
+            </tr>
+        </table>
+      </div>
+      <div id="100IM" class="stroke" style="display:none">
+        <table class="table table-hover table-sm">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Age</th>
+              <th>Time Standard</th>
+              <th>Meet</th>
+              <th>Swim Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1:08.26</td>
+              <td>11</td>
+              <td>A</td>
+              <td>NOW SYOA</td>
+              <td>11/10/18</td>
+            </tr>
+            <tr>
+              <td>1:07.69</td>
+              <td>11</td>
+              <td>A</td>
+              <td>BBA IMX</td>
+              <td>11/3/18</td>
+            </tr>
+            <tr>
+              <td>1:07.88</td>
+              <td>11</td>
+              <td>A</td>
+              <td>BBD Fall Classic</td>
+              <td>10/27/18</td>
+            </tr>
+            <tr>
+              <td>1:08.76</td>
+              <td>10</td>
+              <td>AAAA</td>
+              <td>Y States</td>
+              <td>2/24/18</td>
+            </tr>
+            <tr>
+              <td>1:11.48</td>
+              <td>10</td>
+              <td>AAA</td>
+              <td>Y Clusters</td>
+              <td>2/10/18</td>
+            </tr>
+            <tr>
+              <td>1:11.53</td>
+              <td>10</td>
+              <td>AAA</td>
+              <td>Mid States All Star</td>
+              <td>1/7/18</td>
+            </tr>
+            <tr>
+              <td>1:11.29</td>
+              <td>10</td>
+              <td>AAA</td>
+              <td>FFYS HC</td>
+              <td>12/9/17</td>
+            </tr>
+            <tr>
+              <td>1:14.20</td>
+              <td>10</td>
+              <td>AA</td>
+              <td>NOW SYOA</td>
+              <td>10/28/17</td>
+            </tr>
+            <tr>
+              <td>1:16.27</td>
+              <td>10</td>
+              <td>A</td>
+              <td>BBD Fall Classic</td>
+              <td>10/28/17</td>
+            </tr>
+            <tr>
+              <td>1:13.37</td>
+              <td>9</td>
+              <td>AA</td>
+              <td>USS States</td>
+              <td>3/17/17</td>
+            </tr>
+            <tr>
+              <td>1:19.10</td>
+              <td>9</td>
+              <td>A</td>
+              <td>Y States</td>
+              <td>2/25/17</td>
+            </tr>
+            <tr>
+              <td>1:20.12</td>
+              <td>9</td>
+              <td>BB</td>
+              <td>Y Clusters</td>
+              <td>2/10/17</td>
+            </tr>
+            <tr>
+              <td>1:22.58</td>
+              <td>9</td>
+              <td>BB</td>
+              <td>Marlins Invitational</td>
+              <td>1/13/17</td>
+            </tr>
+            <tr>
+              <td>1:24.08</td>
+              <td>9</td>
+              <td>BB</td>
+              <td>FFYS HC</td>
+              <td>12/11/16</td>
+            </tr>
+            <tr>
+              <td>1:22.19</td>
+              <td>9</td>
+              <td>BB</td>
+              <td>NOW SYOA</td>
+              <td>11/12/16</td>
+            </tr>
+            <tr>
+              <td>1:23.39</td>
+              <td>9</td>
+              <td>BB</td>
+              <td>BBD Fall Classic</td>
+              <td>10/22/16</td>
+            </tr>
+            <tr>
+              <td>1:27.29</td>
+              <td>8</td>
+              <td>BB</td>
+              <td>9 & 10 Under States</td>
+              <td>2/27/16</td>
+            </tr>
+            <tr>
+              <td>1:24.61</td>
+              <td>8</td>
+              <td>BB</td>
+              <td>8 & Under States</td>
+              <td>2/20/16</td>
+            </tr>
+            <tr>
+              <td>1:28.99</td>
+              <td>8</td>
+              <td>BB</td>
+              <td>Y Clusters</td>
+              <td>2/13/16</td>
+            </tr>
+            <tr>
+              <td>1:29.13</td>
+              <td>8</td>
+              <td>BB</td>
+              <td>FFYS HC</td>
+              <td>12/3/15</td>
+            </tr>
+        </table>
+      </div>
+      <div id="200IM" class="stroke" style="display:none">
+        <table class="table table-hover table-sm">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Age</th>
+              <th>Time Standard</th>
+              <th>Meet</th>
+              <th>Swim Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2:27.57</td>
+              <td>11</td>
+              <td>A</td>
+              <td>FYS HC</td>
+              <td>12/8/18</td>
+            </tr>
+            <tr>
+              <td>2:32.88</td>
+              <td>11</td>
+              <td>BB</td>
+              <td>BBD Fall Classic</td>
+              <td>10/27/18</td>
+            </tr>
+            <tr>
+              <td>2:33.73</td>
+              <td>10</td>
+              <td>AAA</td>
+              <td>Mid States All Star</td>
+              <td>1/7/18</td>
+            </tr>
+            <tr>
+              <td>2:46.63</td>
+              <td>10</td>
+              <td>A</td>
+              <td>FFYS HC</td>
+              <td>12/9/17</td>
+            </tr>
+        </table>
+      </div>
+
+      <script>
+        $(function() {
+          var myChart = new Highcharts.Chart('container', {
+            chart: {
+              type: 'spline',
+              zoomType: 'x',
+              style: {
+                fontFamily: 'Helvetica'
+              },
+            },
+            title: {
+              text: 'Evan&#39;s Meet Times'
+            },
+            credits: {
+              enabled: false
+            },
+            xAxis: {
+              type: 'datetime',
+              title: {
+                text: 'Date'
+              }
+            },
+            yAxis: {
+              type: 'datetime',
+              dateTimeLabelFormats: {
+                second: '%M:%S',
+                minute: '%M:%S',
+              },
+              title: {
+                text: 'Results (s)'
+              },
+            },
+            tooltip: {
+              pointFormat: '{point.y:%M:%S.%L}'
+            },
+            plotOptions: {
+              spline: {
+                marker: {
+                  enabled: true
+                }
+              }
+            },
+            series: [{
+              name: "50 Free",
+              data: [
+                [Date.UTC(2015, 10, 7), 37580],
+                [Date.UTC(2015, 10, 14), 36010],
+                [Date.UTC(2015, 11, 12), 33510],
+                [Date.UTC(2016, 1, 20), 32800],
+                [Date.UTC(2016, 1, 27), 32450],
+                [Date.UTC(2016, 11, 3), 31680],
+                [Date.UTC(2016, 11, 11), 32570],
+                [Date.UTC(2017, 0, 7), 30920],
+                [Date.UTC(2017, 1, 12), 30780],
+                [Date.UTC(2017, 1, 25), 30930],
+                [Date.UTC(2017, 2, 17), 29860],
+                [Date.UTC(2017, 9, 28), 29760],
+                [Date.UTC(2017, 10, 11), 29600],
+                [Date.UTC(2017, 11, 9), 28340],
+                [Date.UTC(2018, 0, 7), 28560],
+                [Date.UTC(2018, 0, 14), 29330],
+                [Date.UTC(2018, 0, 28), 28010],
+                [Date.UTC(2018, 1, 24), 27260],
+                [Date.UTC(2018, 2, 16), 26820],
+                [Date.UTC(2018, 9, 27), 27720],
+                [Date.UTC(2018, 10, 10), 28420],
+                [Date.UTC(2018, 11, 8), 27260]
+              ]
+            }]
+          });
+
+          $("#selectStroke").on('change', function() {
+            var selVal = $("#selectStroke").val();
+            if (selVal == "100Free" || selVal == '') {
+              myChart.series[0].update({
+                  name: "100 Free"
+                }, false),
+                myChart.series[0].setData([
+                  [Date.UTC(2016, 0, 15), 77710],
+                  [Date.UTC(2016, 1, 27), 75930],
+                  [Date.UTC(2016, 11, 3), 70230],
+                  [Date.UTC(2017, 0, 7), 66390],
+                  [Date.UTC(2017, 0, 13), 68880],
+                  [Date.UTC(2017, 1, 12), 69720],
+                  [Date.UTC(2017, 1, 25), 65470],
+                  [Date.UTC(2017, 2, 17), 63220],
+                  [Date.UTC(2017, 11, 9), 63640],
+                  [Date.UTC(2018, 0, 11), 62120],
+                  [Date.UTC(2018, 0, 28), 61330],
+                  [Date.UTC(2018, 2, 16), 58840],
+                  [Date.UTC(2018, 9, 27), 59940],
+                  [Date.UTC(2018, 10, 3), 59570],
+                  [Date.UTC(2019, 0, 5), 58420]
+                ]);
+
+              $('.stroke').hide();
+              $('#' + $(this).val()).show();
+
+            } else if (selVal == "200Free") {
+              myChart.series[0].update({
+                  name: "200 Free"
+                }, false),
+                myChart.series[0].setData([
+                  [Date.UTC(2016, 10, 12), 160990],
+                  [Date.UTC(2016, 11, 11), 156000],
+                  [Date.UTC(2017, 10, 11), 145480],
+                  [Date.UTC(2017, 11, 9), 136110],
+                  [Date.UTC(2018, 0, 11), 135360],
+                  [Date.UTC(2018, 0, 28), 135900],
+                  [Date.UTC(2018, 2, 16), 128940],
+                  [Date.UTC(2018, 9, 27), 133540],
+                  [Date.UTC(2018, 10, 10), 133810]
+                ]);
+
+              $('.stroke').hide();
+              $('#' + $(this).val()).show();
+
+            } else if (selVal == "500Free") {
+              myChart.series[0].update({
+                  name: "500 Free"
+                }, false),
+                myChart.series[0].setData([
+                  [Date.UTC(2017, 10, 11), 383060],
+                  [Date.UTC(2018, 1, 24), 369960],
+                  [Date.UTC(2018, 2, 16), 345650],
+                  [Date.UTC(2018, 10, 3), 353570]
+                ]);
+
+              $('.stroke').hide();
+              $('#' + $(this).val()).show();
+
+            } else if (selVal == "50Back") {
+              myChart.series[0].update({
+                  name: "50 Back"
+                }, false),
+                myChart.series[0].setData([
+                  [Date.UTC(2016, 0, 17), 41700],
+                  [Date.UTC(2016, 1, 27), 39430],
+                  [Date.UTC(2016, 10, 12), 37700],
+                  [Date.UTC(2017, 0, 6), 36640],
+                  [Date.UTC(2017, 0, 14), 38630],
+                  [Date.UTC(2017, 1, 10), 37960],
+                  [Date.UTC(2017, 2, 17), 34720],
+                  [Date.UTC(2017, 10, 11), 35360],
+                  [Date.UTC(2017, 11, 9), 35250],
+                  [Date.UTC(2018, 0, 27), 35670],
+                  [Date.UTC(2018, 11, 8), 32610]
+                ]);
+
+              $('.stroke').hide();
+              $('#' + $(this).val()).show();
+
+            } else if (selVal == "100Back") {
+              myChart.series[0].update({
+                  name: "100 Back"
+                }, false),
+                myChart.series[0].setData([
+                  [Date.UTC(2016, 11, 11), 84630],
+                  [Date.UTC(2017, 1, 11), 83440],
+                  [Date.UTC(2017, 11, 17), 75670],
+                  [Date.UTC(2018, 0, 14), 77460]
+                ]);
+
+              $('.stroke').hide();
+              $('#' + $(this).val()).show();
+
+            } else if (selVal == "50Breast") {
+              myChart.series[0].update({
+                  name: "50 Breast"
+                }, false),
+                myChart.series[0].setData([
+                  [Date.UTC(2015, 10, 14), 51840],
+                  [Date.UTC(2017, 0, 7), 44600],
+                  [Date.UTC(2017, 1, 10), 43240],
+                  [Date.UTC(2017, 9, 28), 40550],
+                  [Date.UTC(2018, 0, 14), 39580],
+                  [Date.UTC(2018, 2, 16), 36480],
+                  [Date.UTC(2018, 9, 27), 36050],
+                  [Date.UTC(2018, 11, 8), 36900]
+                ]);
+
+              $('.stroke').hide();
+              $('#' + $(this).val()).show();
+
+            } else if (selVal == "100Breast") {
+              myChart.series[0].update({
+                  name: "100 Breast"
+                }, false),
+                myChart.series[0].setData([
+                  [Date.UTC(2017, 10, 17), 85230],
+                  [Date.UTC(2018, 0, 11), 82240],
+                  [Date.UTC(2018, 0, 28), 81280],
+                  [Date.UTC(2018, 2, 16), 76600],
+                  [Date.UTC(2018, 9, 27), 78280],
+                  [Date.UTC(2018, 10, 3), 78690],
+                  [Date.UTC(2018, 10, 10), 79880]
+                ]);
+
+              $('.stroke').hide();
+              $('#' + $(this).val()).show();
+
+            } else if (selVal == "200Breast") {
+              myChart.series[0].update({
+                  name: "200 Breast"
+                }, false),
+                myChart.series[0].setData([
+                  [Date.UTC(2016, 10, 14), 168190]
+                ]);
+
+              $('.stroke').hide();
+              $('#' + $(this).val()).show();
+
+            } else if (selVal == "50Fly") {
+              myChart.series[0].update({
+                  name: "50 Fly"
+                }, false),
+                myChart.series[0].setData([
+                  [Date.UTC(2016, 9, 22), 40480],
+                  [Date.UTC(2016, 10, 12), 41530],
+                  [Date.UTC(2017, 9, 28), 35580],
+                  [Date.UTC(2018, 1, 10), 32270],
+                  [Date.UTC(2018, 9, 27), 31590],
+                  [Date.UTC(2018, 10, 10), 32730],
+                  [Date.UTC(2019, 0, 5), 30680],
+                ]);
+
+              $('.stroke').hide();
+              $('#' + $(this).val()).show();
+
+            } else if (selVal == "100Fly") {
+              myChart.series[0].update({
+                  name: "100 Fly"
+                }, false),
+                myChart.series[0].setData([
+                  [Date.UTC(2018, 0, 14), 83130],
+                  [Date.UTC(2018, 11, 8), 69610]
+                ]);
+
+              $('.stroke').hide();
+              $('#' + $(this).val()).show();
+
+            } else if (selVal == "50Free") {
+              myChart.series[0].update({
+                  name: "50 Free"
+                }, false),
+                myChart.series[0].setData([
+                  [Date.UTC(2015, 10, 7), 37580],
+                  [Date.UTC(2015, 10, 14), 36010],
+                  [Date.UTC(2015, 11, 12), 33510],
+                  [Date.UTC(2016, 1, 20), 32800],
+                  [Date.UTC(2016, 1, 27), 32450],
+                  [Date.UTC(2016, 11, 3), 31680],
+                  [Date.UTC(2016, 11, 11), 32570],
+                  [Date.UTC(2017, 0, 7), 30920],
+                  [Date.UTC(2017, 1, 12), 30780],
+                  [Date.UTC(2017, 1, 25), 30930],
+                  [Date.UTC(2017, 2, 17), 29860],
+                  [Date.UTC(2017, 9, 28), 29760],
+                  [Date.UTC(2017, 10, 11), 29600],
+                  [Date.UTC(2017, 11, 9), 28340],
+                  [Date.UTC(2018, 0, 7), 28560],
+                  [Date.UTC(2018, 0, 14), 29330],
+                  [Date.UTC(2018, 0, 28), 28010],
+                  [Date.UTC(2018, 1, 24), 27260],
+                  [Date.UTC(2018, 2, 16), 26820],
+                  [Date.UTC(2018, 9, 27), 27720],
+                  [Date.UTC(2018, 10, 10), 28420],
+                  [Date.UTC(2018, 11, 8), 27260]
+                ]);
+
+              $('.stroke').hide();
+              $('#' + $(this).val()).show();
+
+            } else if (selVal == "100IM") {
+              myChart.series[0].update({
+                  name: "100 IM"
+                }, false),
+                myChart.series[0].setData([
+                  [Date.UTC(2015, 11, 13), 89130],
+                  [Date.UTC(2016, 1, 12), 88990],
+                  [Date.UTC(2016, 1, 20), 84610],
+                  [Date.UTC(2016, 1, 27), 87290],
+                  [Date.UTC(2016, 9, 22), 83390],
+                  [Date.UTC(2016, 10, 12), 82190],
+                  [Date.UTC(2016, 11, 11), 84080],
+                  [Date.UTC(2017, 0, 13), 82580],
+                  [Date.UTC(2017, 1, 10), 80120],
+                  [Date.UTC(2017, 1, 25), 79100],
+                  [Date.UTC(2017, 2, 17), 73370],
+                  [Date.UTC(2017, 9, 28), 76270],
+                  [Date.UTC(2017, 10, 11), 74700],
+                  [Date.UTC(2017, 11, 9), 71290],
+                  [Date.UTC(2018, 0, 11), 71530],
+                  [Date.UTC(2018, 1, 10), 71480],
+                  [Date.UTC(2018, 1, 24), 68760],
+                  [Date.UTC(2018, 9, 27), 67880],
+                  [Date.UTC(2018, 10, 3), 67690],
+                  [Date.UTC(2018, 10, 10), 68260]
+                ]);
+
+              $('.stroke').hide();
+              $('#' + $(this).val()).show();
+
+            } else if (selVal == "200IM") {
+              myChart.series[0].update({
+                  name: "200 IM"
+                }, false),
+                myChart.series[0].setData([
+                  [Date.UTC(2017, 11, 9), 166630],
+                  [Date.UTC(2018, 0, 11), 153730],
+                  [Date.UTC(2018, 9, 27), 152880],
+                  [Date.UTC(2018, 11, 8), 147570]
+                ]);
+
+              $('.stroke').hide();
+              $('#' + $(this).val()).show();
+
+            }
+          });
+
+        });
+      </script>
+
+    </div>
+    <div class="tab-pane fade" id="pills-Avery" role="tabpanel" aria-labelledby="pills-Avery-tab">
+
+      <select id="selectData">
+        <option value="50FreeA" selected="selected">50 Free</option>
+        <option value="100FreeA">100 Free</option>
+        <option value="200FreeA">200 Free</option>
+        <option value="500FreeA">500 Free</option>
+        <option value="50BackA">50 Back</option>
+        <!--    <option value="100BackA">100 Back</option> -->
+        <option value="50BreastA">50 Breast</option>
+        <!--    <option value="100BreastA">100 Breast</option> -->
+        <option value="50FlyA">50 Fly</option>
+        <option value="100FlyA">100 Fly</option>
+        <option value="100IMA">100 IM</option>
+        <option value="200IMA">200 IM</option>
+      </select>
+
+      <div id="containerA" style="width: 100%; height:400px;"></div>
+
+      <div id="50FreeA" class="stroke" style="display">
+        <table class="table table-hover table-sm">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Age</th>
+              <th>Time Standard</th>
+              <th>Meet</th>
+              <th>Swim Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>32.03</td>
+              <td>9</td>
+              <td>BB</td>
+              <td>FFYS Holiday Invitational</td>
+              <td>12/9/18</td>
+            </tr>
+            <tr>
+              <td>30.87</td>
+              <td>9</td>
+              <td>A</td>
+              <td>BBD Fall Festival</td>
+              <td>10/27/18</td>
+            </tr>
+            <tr>
+              <td>32.94</td>
+              <td>8</td>
+              <td>BB</td>
+              <td>Y 9 & 10 States</td>
+              <td>2/24/18</td>
+            </tr>
+            <tr>
+              <td>33.11</td>
+              <td>10</td>
+              <td>BB</td>
+              <td>Y 8 & Under States</td>
+              <td>2/17/18</td>
+            </tr>
+            <tr>
+              <td>33.40</td>
+              <td>8</td>
+              <td>BB</td>
+              <td>Y Clusters</td>
+              <td>2/11/18</td>
+            </tr>
+            <tr>
+              <td>33.49</td>
+              <td>8</td>
+              <td>BB</td>
+              <td>Marlins Invitational</td>
+              <td>1/14/18</td>
+            </tr>
+            <tr>
+              <td>34.72</td>
+              <td>8</td>
+              <td>BB</td>
+              <td>FFYS Holiday Invitational</td>
+              <td>12/10/17</td>
+            </tr>
+            <tr>
+              <td>35.57</td>
+              <td>8</td>
+              <td>B</td>
+              <td>NOW SYOA</td>
+              <td>11/11/17</td>
+            </tr>
+            <tr>
+              <td>38.30</td>
+              <td>7</td>
+              <td>B</td>
+              <td>Y 8 & Under States</td>
+              <td>2/18/17</td>
+            </tr>
+            <tr>
+              <td>37.97</td>
+              <td>7</td>
+              <td>B</td>
+              <td>Y Clusters</td>
+              <td>2/12/17</td>
+            </tr>
+            <tr>
+              <td>39.70</td>
+              <td>7</td>
+              <td></td>
+              <td>Marlins Invitational</td>
+              <td>1/14/17</td>
+            </tr>
+            <tr>
+              <td>40.00</td>
+              <td>7</td>
+              <td></td>
+              <td>FFYS Holiday Invitational</td>
+              <td>12/11/16</td>
+            </tr>
+            <tr>
+              <td>43.86</td>
+              <td>7</td>
+              <td></td>
+              <td>NOW SYOA</td>
+              <td>11/12/16</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="100FreeA" class="stroke" style="display:none">
+        <table class="table table-hover table-sm">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Age</th>
+              <th>Time Standard</th>
+              <th>Meet</th>
+              <th>Swim Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1:09.92</td>
+              <td>9</td>
+              <td>A</td>
+              <td>Last Train to Indy</td>
+              <td>1/5/19</td>
+            </tr>
+            <tr>
+              <td>1:12.66</td>
+              <td>9</td>
+              <td>BB</td>
+              <td>FFYS HC</td>
+              <td>12/8/18</td>
+            </tr>
+            <tr>
+              <td>1:14.18</td>
+              <td>9</td>
+              <td>BB</td>
+              <td>BBD Fall Classic</td>
+              <td>10/28/18</td>
+            </tr>
+            <tr>
+              <td>1:21.35</td>
+              <td>8</td>
+              <td>B</td>
+              <td>Circle City Classic</td>
+              <td>12/9/17</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="200FreeA" class="stroke" style="display:none">
+        <table class="table table-hover table-sm">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Age</th>
+              <th>Time Standard</th>
+              <th>Meet</th>
+              <th>Swim Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2:42.41</td>
+              <td>9</td>
+              <td>BB</td>
+              <td>NOW SYOA</td>
+              <td>11/10/18</td>
+            </tr>
+            <tr>
+              <td>2:44.88</td>
+              <td>9</td>
+              <td>BB</td>
+              <td>BBD Fall Classic</td>
+              <td>10/28/18</td>
+            </tr>
+        </table>
+      </div>
+      <div id="500FreeA" class="stroke" style="display:none">
+        <table class="table table-hover table-sm">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Age</th>
+              <th>Time Standard</th>
+              <th>Meet</th>
+              <th>Swim Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>7:25.77</td>
+              <td>9</td>
+              <td>BB</td>
+              <td>NOW SYOA</td>
+              <td>11/11/18</td>
+            </tr>
+        </table>
+      </div>
+      <div id="50BackA" class="stroke" style="display:none">
+        <table class="table table-hover table-sm">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Age</th>
+              <th>Time Standard</th>
+              <th>Meet</th>
+              <th>Swim Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>40.24</td>
+              <td>9</td>
+              <td>BB</td>
+              <td>Last Train to Indy</td>
+              <td>1/5/19</td>
+            </tr>
+            <tr>
+              <td>39.65</td>
+              <td>9</td>
+              <td>BB</td>
+              <td>FFYS Holidat Invitational</td>
+              <td>12/8/18</td>
+            </tr>
+            <tr>
+              <td>40.94</td>
+              <td>9</td>
+              <td>BB</td>
+              <td>NOW SYOA</td>
+              <td>11/10/18</td>
+            </tr>
+            <tr>
+              <td>48.38</td>
+              <td>7</td>
+              <td></td>
+              <td>BBD Holiday Invitational</td>
+              <td>12/3/16</td>
+            </tr>
+        </table>
+      </div>
+      <!--      <div id="100BackA" class="stroke" style="display:none">
+        <table class="table table-hover table-sm">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Age</th>
+              <th>Time Standard</th>
+              <th>Meet</th>
+              <th>Swim Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1:17.46</td>
+              <td>10</td>
+              <td>A</td>
+              <td>MCMA</td>
+              <td>1/14/18</td>
+            </tr>
+        </table>
+      </div> -->
+      <div id="50BreastA" class="stroke" style="display:none">
+        <table class="table table-hover table-sm">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Age</th>
+              <th>Time Standard</th>
+              <th>Meet</th>
+              <th>Swim Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>46.12</td>
+              <td>9</td>
+              <td>BB</td>
+              <td>BBD Fall Festival</td>
+              <td>10/27/18</td>
+            </tr>
+        </table>
+      </div>
+      <!--      <div id="100BreastA" class="stroke" style="display:none">
+        <table class="table table-hover table-sm">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Age</th>
+              <th>Time Standard</th>
+              <th>Meet</th>
+              <th>Swim Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1:19.88</td>
+              <td>11</td>
+              <td>BB</td>
+              <td>NOW SYOA</td>
+              <td>11/10/18</td>
+            </tr>
+        </table>
+      </div> -->
+      <!--      <div id="200BreastA" class="stroke" style="display:none">
+        <table class="table table-hover table-sm">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Age</th>
+              <th>Time Standard</th>
+              <th>Meet</th>
+              <th>Swim Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2:48.19</td>
+              <td>11</td>
+              <td>BB</td>
+              <td>Last Train to Indy</td>
+              <td>1/5/19</td>
+            </tr>
+        </table>
+      </div> -->
+      <div id="50FlyA" class="stroke" style="display:none">
+        <table class="table table-hover table-sm">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Age</th>
+              <th>Time Standard</th>
+              <th>Meet</th>
+              <th>Swim Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>36.61</td>
+              <td>9</td>
+              <td>BB</td>
+              <td>Last Train to Indy</td>
+              <td>1/5/19</td>
+            </tr>
+            <tr>
+              <td>36.71</td>
+              <td>9</td>
+              <td>BB</td>
+              <td>FFYS Holiday Invitational</td>
+              <td>12/9/18</td>
+            </tr>
+            <tr>
+              <td>39.96</td>
+              <td>9</td>
+              <td>BB</td>
+              <td>NOW SYOA</td>
+              <td>11/10/18</td>
+            </tr>
+            <tr>
+              <td>36.66</td>
+              <td>9</td>
+              <td>BB</td>
+              <td>BBD Fall Festival</td>
+              <td>10/27/18</td>
+            </tr>
+            <tr>
+              <td>39.58</td>
+              <td>8</td>
+              <td>BB</td>
+              <td>Y 9 & 10 States</td>
+              <td>2/24/18</td>
+            </tr>
+            <tr>
+              <td>40.01</td>
+              <td>8</td>
+              <td>B</td>
+              <td>FFYS Holiday Invitational</td>
+              <td>12/10/17</td>
+            </tr>
+            <tr>
+              <td>41.73</td>
+              <td>8</td>
+              <td>BB</td>
+              <td>BBD Fall Festival</td>
+              <td>12/11/16</td>
+            </tr>
+            <tr>
+              <td>47.24</td>
+              <td>7</td>
+              <td>B</td>
+              <td>FFYS Holiday Invitational</td>
+              <td>12/11/16</td>
+            </tr>
+        </table>
+      </div>
+      <div id="100FlyA" class="stroke" style="display:none">
+        <table class="table table-hover table-sm">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Age</th>
+              <th>Time Standard</th>
+              <th>Meet</th>
+              <th>Swim Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1:26.26</td>
+              <td>9</td>
+              <td>BB</td>
+              <td>Last Train to Indy</td>
+              <td>1/5/19</td>
+            </tr>
+            <tr>
+              <td>1:30.69</td>
+              <td>9</td>
+              <td>BB</td>
+              <td>FFYS Holiday Invitational</td>
+              <td>12/8/18</td>
+            </tr>
+        </table>
+      </div>
+      <div id="100IMA" class="stroke" style="display:none">
+        <table class="table table-hover table-sm">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Age</th>
+              <th>Time Standard</th>
+              <th>Meet</th>
+              <th>Swim Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1:25.09</td>
+              <td>9</td>
+              <td>BB</td>
+              <td>FFYS Holiday Invitational</td>
+              <td>12/9/18</td>
+            </tr>
+            <tr>
+              <td>1:27.93</td>
+              <td>9</td>
+              <td>BB</td>
+              <td>NOW SYOA</td>
+              <td>11/10/18</td>
+            </tr>
+            <tr>
+              <td>1:24.99</td>
+              <td>9</td>
+              <td>BB</td>
+              <td>BBD Fall Festival</td>
+              <td>10/27/18</td>
+            </tr>
+            <tr>
+              <td>1:28.24</td>
+              <td>8</td>
+              <td>BB</td>
+              <td>Y 9 & 10 States</td>
+              <td>2/24/18</td>
+            </tr>
+            <tr>
+              <td>1:34.58</td>
+              <td>8</td>
+              <td>B</td>
+              <td>FFYS Holiday Invitational</td>
+              <td>12/10/17</td>
+            </tr>
+            <tr>
+              <td>1:32.85</td>
+              <td>8</td>
+              <td>B</td>
+              <td>NOW SYOA</td>
+              <td>11/11/17</td>
+            </tr>
+            <tr>
+              <td>1:35.95</td>
+              <td>8</td>
+              <td>B</td>
+              <td>BBD Fall Festival</td>
+              <td>10/28/17</td>
+            </tr>
+            <tr>
+              <td>1:42.27</td>
+              <td>7</td>
+              <td>B</td>
+              <td>Y 8 & Under States</td>
+              <td>2/18/17</td>
+            </tr>
+            <tr>
+              <td>1:51.29</td>
+              <td>7</td>
+              <td></td>
+              <td>Marlins Invitational</td>
+              <td>1/14/17</td>
+            </tr>
+            <tr>
+              <td>1:47.26</td>
+              <td>7</td>
+              <td></td>
+              <td>FFYS Holiday Invitational</td>
+              <td>12/11/16</td>
+            </tr>
+            <tr>
+              <td>1:46.24</td>
+              <td>7</td>
+              <td></td>
+              <td>BBD Holiday Invitational</td>
+              <td>12/3/16</td>
+            </tr>
+            <tr>
+              <td>1:47.91</td>
+              <td>7</td>
+              <td></td>
+              <td>NOW SYOA</td>
+              <td>11/12/16</td>
+            </tr>
+        </table>
+      </div>
+      <div id="200IMA" class="stroke" style="display:none">
+        <table class="table table-hover table-sm">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Age</th>
+              <th>Time Standard</th>
+              <th>Meet</th>
+              <th>Swim Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>3:08.27</td>
+              <td>9</td>
+              <td>BB</td>
+              <td>BBD Fall Festival</td>
+              <td>10/26/18</td>
+            </tr>
+        </table>
+      </div>
+
+      <script>
+        $(function() {
+          var myChart = new Highcharts.Chart('containerA', {
+            chart: {
+              type: 'spline',
+              zoomType: 'x',
+              style: {
+                fontFamily: 'Helvetica'
+              },
+            },
+            title: {
+              text: 'Avery&#39;s Meet Times'
+            },
+            credits: {
+              enabled: false
+            },
+            xAxis: {
+              type: 'datetime',
+              title: {
+                text: 'Date'
+              }
+            },
+            yAxis: {
+              type: 'datetime',
+              dateTimeLabelFormats: { //force all formats to be minute:second
+                second: '%M:%S',
+                minute: '%M:%S',
+              },
+              title: {
+                text: 'Results (s)'
+              },
+            },
+            tooltip: {
+              pointFormat: '{point.y:%M:%S.%L}'
+            },
+            plotOptions: {
+              spline: {
+                marker: {
+                  enabled: true
+                }
+              }
+            },
+            series: [{
+              name: "50 Free",
+              data: [
+                [Date.UTC(2016, 10, 12), 43860],
+                [Date.UTC(2016, 11, 11), 40000],
+                [Date.UTC(2017, 0, 14), 39700],
+                [Date.UTC(2017, 1, 12), 37970],
+                [Date.UTC(2017, 1, 18), 38300],
+                [Date.UTC(2017, 10, 11), 35570],
+                [Date.UTC(2017, 11, 10), 34720],
+                [Date.UTC(2018, 0, 14), 33490],
+                [Date.UTC(2018, 1, 11), 33400],
+                [Date.UTC(2018, 1, 17), 33110],
+                [Date.UTC(2018, 1, 24), 32940],
+                [Date.UTC(2018, 9, 27), 30870],
+                [Date.UTC(2018, 11, 9), 32030]
+              ]
+            }]
+          });
+
+          $("#selectData").on('change', function() {
+            var selVal = $("#selectData").val();
+            if (selVal == "100FreeA" || selVal == '') {
+              myChart.series[0].update({
+                  name: "100 Free"
+                }, false),
+                myChart.series[0].setData([
+                  [Date.UTC(2017, 11, 9), 81350],
+                  [Date.UTC(2018, 9, 28), 74180],
+                  [Date.UTC(2018, 11, 8), 72660],
+                  [Date.UTC(2019, 0, 5), 69920]
+                ]);
+
+              $('.stroke').hide();
+              $('#' + $(this).val()).show();
+
+            } else if (selVal == "200FreeA") {
+              myChart.series[0].update({
+                  name: "200 Free"
+                }, false),
+                myChart.series[0].setData([
+                  [Date.UTC(2018, 9, 28), 164880],
+                  [Date.UTC(2018, 10, 11), 162410]
+                ]);
+
+              $('.stroke').hide();
+              $('#' + $(this).val()).show();
+
+            } else if (selVal == "500FreeA") {
+              myChart.series[0].update({
+                  name: "500 Free"
+                }, false),
+                myChart.series[0].setData([
+                  [Date.UTC(2018, 10, 3), 445770]
+                ]);
+
+              $('.stroke').hide();
+              $('#' + $(this).val()).show();
+
+            } else if (selVal == "50BackA") {
+              myChart.series[0].update({
+                  name: "50 Back"
+                }, false),
+                myChart.series[0].setData([
+                  [Date.UTC(2016, 11, 3), 48380],
+                  [Date.UTC(2018, 10, 11), 40940],
+                  [Date.UTC(2018, 11, 8), 39650],
+                  [Date.UTC(2019, 0, 5), 40240]
+                ]);
+
+              $('.stroke').hide();
+              $('#' + $(this).val()).show();
+
+            } else if (selVal == "100IMA") {
+              myChart.series[0].update({
+                  name: "100 IM"
+                }, false),
+                myChart.series[0].setData([
+                  [Date.UTC(2016, 10, 12), 107910],
+                  [Date.UTC(2016, 11, 3), 106240],
+                  [Date.UTC(2016, 11, 11), 107260],
+                  [Date.UTC(2017, 0, 14), 111290],
+                  [Date.UTC(2017, 1, 18), 102270],
+                  [Date.UTC(2017, 9, 28), 95950],
+                  [Date.UTC(2017, 10, 11), 92850],
+                  [Date.UTC(2017, 11, 10), 94580],
+                  [Date.UTC(2018, 1, 24), 88240],
+                  [Date.UTC(2018, 9, 27), 84990],
+                  [Date.UTC(2018, 10, 10), 87930],
+                  [Date.UTC(2018, 11, 9), 85090]
+                ]);
+
+              $('.stroke').hide();
+              $('#' + $(this).val()).show();
+
+            } else if (selVal == "200IMA") {
+              myChart.series[0].update({
+                  name: "200 IM"
+                }, false),
+                myChart.series[0].setData([
+                  [Date.UTC(2018, 9, 28), 188270]
+                ]);
+
+              $('.stroke').hide();
+              $('#' + $(this).val()).show();
+
+            } else if (selVal == "50BreastA") {
+              myChart.series[0].update({
+                  name: "50 Breast"
+                }, false),
+                myChart.series[0].setData([
+                  [Date.UTC(2018, 9, 27), 46120]
+                ]);
+
+              $('.stroke').hide();
+              $('#' + $(this).val()).show();
+
+            } else if (selVal == "50FlyA") {
+              myChart.series[0].update({
+                  name: "50 Fly"
+                }, false),
+                myChart.series[0].setData([
+                  [Date.UTC(2016, 11, 11), 47240],
+                  [Date.UTC(2017, 9, 28), 41730],
+                  [Date.UTC(2017, 11, 10), 40010],
+                  [Date.UTC(2018, 1, 24), 39580],
+                  [Date.UTC(2018, 9, 27), 36660],
+                  [Date.UTC(2018, 10, 10), 39960],
+                  [Date.UTC(2018, 11, 9), 36710],
+                  [Date.UTC(2019, 0, 5), 36660]
+                ]);
+
+              $('.stroke').hide();
+              $('#' + $(this).val()).show();
+
+            } else if (selVal == "100FlyA") {
+              myChart.series[0].update({
+                  name: "100 Fly"
+                }, false),
+                myChart.series[0].setData([
+                  [Date.UTC(2018, 11, 8), 90690],
+                  [Date.UTC(2019, 0, 5), 86860]
+                ]);
+
+              $('.stroke').hide();
+              $('#' + $(this).val()).show();
+
+            } else if (selVal == "50FreeA") {
+              myChart.series[0].update({
+                  name: "50 Free"
+                }, false),
+                myChart.series[0].setData([
+                  [Date.UTC(2016, 10, 12), 43860],
+                  [Date.UTC(2016, 11, 11), 40000],
+                  [Date.UTC(2017, 0, 14), 39700],
+                  [Date.UTC(2017, 1, 12), 37970],
+                  [Date.UTC(2017, 1, 18), 38300],
+                  [Date.UTC(2017, 10, 11), 35570],
+                  [Date.UTC(2017, 11, 10), 34720],
+                  [Date.UTC(2018, 0, 14), 33490],
+                  [Date.UTC(2018, 1, 11), 33400],
+                  [Date.UTC(2018, 1, 17), 33110],
+                  [Date.UTC(2018, 1, 24), 32940],
+                  [Date.UTC(2018, 9, 27), 30870],
+                  [Date.UTC(2018, 11, 9), 32030]
+                ]);
+
+              $('.stroke').hide();
+              $('#' + $(this).val()).show();
+
+            }
+          });
+
+        });
+      </script>
+
+    </div>
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+
+</html>
