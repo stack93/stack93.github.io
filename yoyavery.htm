@@ -29,13 +29,22 @@
         <a class="nav-link" id="pills-500Free-tab" data-toggle="pill" href="#pills-500Free" role="tab" aria-controls="pills-500Free" aria-selected="false">500 Free</a>
       </li>
       <li class="nav-item">
+        <a class="nav-link" id="pills-50Back-tab" data-toggle="pill" href="#pills-50Back" role="tab" aria-controls="pills-50Back" aria-selected="false">50 Back</a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" id="pills-50Breast-tab" data-toggle="pill" href="#pills-50Breast" role="tab" aria-controls="pills-50Breast" aria-selected="false">50 Breast</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" id="pills-50Fly-tab" data-toggle="pill" href="#pills-50Fly" role="tab" aria-controls="pills-50Fly" aria-selected="false">50 Fly</a>
       </li>
       <li class="nav-item">
+        <a class="nav-link" id="pills-100Fly-tab" data-toggle="pill" href="#pills-100Fly" role="tab" aria-controls="pills-100Fly" aria-selected="false">100 Fly</a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" id="pills-100IM-tab" data-toggle="pill" href="#pills-100IM" role="tab" aria-controls="pills-100IM" aria-selected="false">100 IM</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="pills-200IM-tab" data-toggle="pill" href="#pills-200IM" role="tab" aria-controls="pills-200IM" aria-selected="false">200 IM</a>
       </li>
     </ul>
     <figure class="figure">
@@ -64,7 +73,7 @@
           },
           xAxis: {
             type: 'datetime',
-            dateTimeLabelFormats: { // research different date formats
+            dateTimeLabelFormats: {
               month: '%e. %b',
               year: '%b'
             },
@@ -149,7 +158,7 @@
           },
           xAxis: {
             type: 'datetime',
-            dateTimeLabelFormats: { // research different date formats
+            dateTimeLabelFormats: {
               month: '%e. %b',
               year: '%b'
             },
@@ -159,7 +168,7 @@
           },
           yAxis: {
             type: 'datetime',
-            dateTimeLabelFormats: { //force all formats to be minute:second
+            dateTimeLabelFormats: {
               second: '%M:%S',
               minute: '%M:%S',
             },
@@ -178,12 +187,6 @@
               }
             }
           },
-
-          //    colors: ['#6CF', '#39F', '#06C', '#036', '#000'],
-
-          // Define the data points. All series have a dummy year
-          // of 1970/71 in order to be compared on the same x axis. Note
-          // that in JavaScript, months start at 0 for January, 1 for February etc.
           series: [{
             name: "2017-2018",
             data: [
@@ -221,7 +224,7 @@
           },
           xAxis: {
             type: 'datetime',
-            dateTimeLabelFormats: { // research different date formats
+            dateTimeLabelFormats: {
               month: '%e. %b',
               year: '%b'
             },
@@ -231,7 +234,7 @@
           },
           yAxis: {
             type: 'datetime',
-            dateTimeLabelFormats: { //force all formats to be minute:second
+            dateTimeLabelFormats: {
               second: '%M:%S',
               minute: '%M:%S',
             },
@@ -250,12 +253,6 @@
               }
             }
           },
-
-          //    colors: ['#6CF', '#39F', '#06C', '#036', '#000'],
-
-          // Define the data points. All series have a dummy year
-          // of 1970/71 in order to be compared on the same x axis. Note
-          // that in JavaScript, months start at 0 for January, 1 for February etc.
           series: [{
             name: "2018-2019",
             data: [
@@ -288,7 +285,7 @@
           },
           xAxis: {
             type: 'datetime',
-            dateTimeLabelFormats: { // research different date formats
+            dateTimeLabelFormats: {
               month: '%e. %b',
               year: '%b'
             },
@@ -298,7 +295,7 @@
           },
           yAxis: {
             type: 'datetime',
-            dateTimeLabelFormats: { //force all formats to be minute:second
+            dateTimeLabelFormats: {
               second: '%M:%S',
               minute: '%M:%S',
             },
@@ -317,12 +314,6 @@
               }
             }
           },
-
-          //    colors: ['#6CF', '#39F', '#06C', '#036', '#000'],
-
-          // Define the data points. All series have a dummy year
-          // of 1970/71 in order to be compared on the same x axis. Note
-          // that in JavaScript, months start at 0 for January, 1 for February etc.
           series: [{
             name: "2018-2019",
             data: [
@@ -332,6 +323,74 @@
         });
       </script>
 
+    </div>
+
+    <div class="tab-pane fade" id="pills-50Back" role="tabpanel" aria-labelledby="pills-50Back-tab">
+
+      <div id="container50Back" style="width:100%; height:400px;"></div>
+      <script type="text/javascript">
+        Highcharts.chart('container50Back', {
+          chart: {
+            type: 'spline',
+            zoomType: 'x',
+            style: {
+              fontFamily: 'Helvetica'
+            },
+          },
+          title: {
+            text: 'Avery Tack Times'
+          },
+          subtitle: {
+            text: 'year-over-year improvements'
+          },
+          xAxis: {
+            type: 'datetime',
+            dateTimeLabelFormats: {
+              month: '%e. %b',
+              year: '%b'
+            },
+            title: {
+              text: 'Date'
+            }
+          },
+          yAxis: {
+            type: 'datetime',
+            dateTimeLabelFormats: {
+              second: '%M:%S',
+              minute: '%M:%S',
+            },
+            title: {
+              text: 'Results (s)'
+            },
+          },
+          tooltip: {
+            headerFormat: '<b>{series.name}</b><br>',
+            pointFormat: '{point.y:%M:%S.%L}'
+          },
+          plotOptions: {
+            spline: {
+              marker: {
+                enabled: true
+              }
+            }
+          },
+          series: [{
+              name: "2016-2017",
+              data: [
+                [Date.UTC(1970, 11, 3), 48380]
+              ]
+            },
+            {
+              name: "2018-2019",
+              data: [
+                [Date.UTC(1970, 11, 10), 40940],
+                [Date.UTC(1970, 11, 18), 39650],
+                [Date.UTC(1971, 0, 5), 40240],
+              ]
+            },
+          ]
+        });
+      </script>
     </div>
 
     <div class="tab-pane fade" id="pills-50Breast" role="tabpanel" aria-labelledby="pills-50Breast-tab">
@@ -354,7 +413,7 @@
           },
           xAxis: {
             type: 'datetime',
-            dateTimeLabelFormats: { // research different date formats
+            dateTimeLabelFormats: {
               month: '%e. %b',
               year: '%b'
             },
@@ -364,7 +423,7 @@
           },
           yAxis: {
             type: 'datetime',
-            dateTimeLabelFormats: { //force all formats to be minute:second
+            dateTimeLabelFormats: {
               second: '%M:%S',
               minute: '%M:%S',
             },
@@ -383,12 +442,6 @@
               }
             }
           },
-
-          //    colors: ['#6CF', '#39F', '#06C', '#036', '#000'],
-
-          // Define the data points. All series have a dummy year
-          // of 1970/71 in order to be compared on the same x axis. Note
-          // that in JavaScript, months start at 0 for January, 1 for February etc.
           series: [{
             name: "2018-2019",
             data: [
@@ -397,7 +450,6 @@
           }, ]
         });
       </script>
-
     </div>
 
     <div class="tab-pane fade" id="pills-50Fly" role="tabpanel" aria-labelledby="pills-50Fly-tab">
@@ -420,7 +472,7 @@
           },
           xAxis: {
             type: 'datetime',
-            dateTimeLabelFormats: { // research different date formats
+            dateTimeLabelFormats: {
               month: '%e. %b',
               year: '%b'
             },
@@ -430,7 +482,7 @@
           },
           yAxis: {
             type: 'datetime',
-            dateTimeLabelFormats: { //force all formats to be minute:second
+            dateTimeLabelFormats: {
               second: '%M:%S',
               minute: '%M:%S',
             },
@@ -449,12 +501,6 @@
               }
             }
           },
-
-          //    colors: ['#6CF', '#39F', '#06C', '#036', '#000'],
-
-          // Define the data points. All series have a dummy year
-          // of 1970/71 in order to be compared on the same x axis. Note
-          // that in JavaScript, months start at 0 for January, 1 for February etc.
           series: [{
               name: "2016-2017",
               data: [
@@ -480,7 +526,67 @@
           ]
         });
       </script>
+    </div>
 
+    <div class="tab-pane fade" id="pills-100Fly" role="tabpanel" aria-labelledby="pills-100Fly-tab">
+
+      <div id="container100Fly" style="width:100%; height:400px;"></div>
+      <script type="text/javascript">
+        Highcharts.chart('container100Fly', {
+          chart: {
+            type: 'spline',
+            zoomType: 'x',
+            style: {
+              fontFamily: 'Helvetica'
+            },
+          },
+          title: {
+            text: 'Avery Tack Times'
+          },
+          subtitle: {
+            text: 'year-over-year improvements'
+          },
+          xAxis: {
+            type: 'datetime',
+            dateTimeLabelFormats: {
+              month: '%e. %b',
+              year: '%b'
+            },
+            title: {
+              text: 'Date'
+            }
+          },
+          yAxis: {
+            type: 'datetime',
+            dateTimeLabelFormats: {
+              second: '%M:%S',
+              minute: '%M:%S',
+            },
+            title: {
+              text: 'Results (s)'
+            },
+          },
+          tooltip: {
+            headerFormat: '<b>{series.name}</b><br>',
+            pointFormat: '{point.y:%M:%S.%L}'
+          },
+          plotOptions: {
+            spline: {
+              marker: {
+                enabled: true
+              }
+            }
+          },
+          series: [{
+              name: "2018-2019",
+              data: [
+                [Date.UTC(1970, 11, 8), 90690],
+                [Date.UTC(1971, 0, 5), 86260]
+              ]
+            },
+          ]
+        });
+      </script>
     </div>
 
     <div class="tab-pane fade" id="pills-100IM" role="tabpanel" aria-labelledby="pills-100IM-tab">
@@ -503,7 +609,7 @@
           },
           xAxis: {
             type: 'datetime',
-            dateTimeLabelFormats: { // research different date formats
+            dateTimeLabelFormats: {
               month: '%e. %b',
               year: '%b'
             },
@@ -513,7 +619,7 @@
           },
           yAxis: {
             type: 'datetime',
-            dateTimeLabelFormats: { //force all formats to be minute:second
+            dateTimeLabelFormats: {
               second: '%M:%S',
               minute: '%M:%S',
             },
@@ -532,12 +638,6 @@
               }
             }
           },
-
-          //    colors: ['#6CF', '#39F', '#06C', '#036', '#000'],
-
-          // Define the data points. All series have a dummy year
-          // of 1970/71 in order to be compared on the same x axis. Note
-          // that in JavaScript, months start at 0 for January, 1 for February etc.
           series: [{
             name: "2016-2017",
             data: [
@@ -564,7 +664,66 @@
           }, ]
         });
       </script>
+    </div>
 
+    <div class="tab-pane fade" id="pills-200IM" role="tabpanel" aria-labelledby="pills-200IM-tab">
+
+      <div id="container200IM" style="width:100%; height:400px;"></div>
+      <script type="text/javascript">
+        Highcharts.chart('container200IM', {
+          chart: {
+            type: 'spline',
+            zoomType: 'x',
+            style: {
+              fontFamily: 'Helvetica'
+            },
+          },
+          title: {
+            text: 'Avery Tack Times'
+          },
+          subtitle: {
+            text: 'year-over-year improvements'
+          },
+          xAxis: {
+            type: 'datetime',
+            dateTimeLabelFormats: {
+              month: '%e. %b',
+              year: '%b'
+            },
+            title: {
+              text: 'Date'
+            }
+          },
+          yAxis: {
+            type: 'datetime',
+            dateTimeLabelFormats: {
+              second: '%M:%S',
+              minute: '%M:%S',
+            },
+            title: {
+              text: 'Results (s)'
+            },
+          },
+          tooltip: {
+            headerFormat: '<b>{series.name}</b><br>',
+            pointFormat: '{point.y:%M:%S.%L}'
+          },
+          plotOptions: {
+            spline: {
+              marker: {
+                enabled: true
+              }
+            }
+          },
+          series: [{
+              name: "2018-2019",
+              data: [
+                [Date.UTC(1970, 9, 26), 188270]
+              ]
+            },
+          ]
+        });
+      </script>
     </div>
 
   </div>
