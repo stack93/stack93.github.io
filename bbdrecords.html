@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>BBD Pacesetters</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
+<style type="text/css">
+  td {
+    padding: 3px;
+    font-family: Oswald;
+    font-size: 11pt;
+    text-align: right;
+  }
+
+  thead {
+    background-color: #050F4D;
+    color: #ffffff;
+    font-family: Oswald;
+    font-size: 12pt;
+  }
+
+  tr:nth-child(even) {
+    background-color: #e0e0e0;
+  }
+
+  h3 {
+    font-family: Oswald;
+    font-weight: bold;
+  }
+
+  .myDiv {
+    display: none;
+    padding: 5px;
+    margin-top: 5px;
+  }
+
+  #show8SCY {}
+
+  #show910SCY {}
+
+  #show1112SCY {}
+
+  #show1314SCY {}
+
+  #show15SCY {}
+
+  #showLCM {}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script>
+  $(document).ready(function () {
+    var demovalue = $(this).val();
+    $("#show8SCY").show();
+  });
+
+  $(document).ready(function () {
+    $('#myselection').on('change', function () {
+      var demovalue = $(this).val();
+      $("div.myDiv").hide();
+      $("#show" + demovalue).show();
+    });
+  });
+
+</script>
+
+<body>
+
+  <div>
+    <table>
+      <tr>
+        <td>
+          <img src="https://drive.google.com/uc?id=1uAV89urJWC8RpOZqz1TmBPTIVLtjWQfz">
+        </td>
+        <td width="50"></td>
+        <td>
+          <h2 style="text-align:left;">Age Group Records</h2>
+          <select id="myselection">
+            <option value="8SCY">8 & Under Short Course Yards</option>
+            <option value="910SCY">9 & 10 Short Course Yards</option>
+            <option value="1112SCY">11 & 12 Short Course Yards</option>
+            <option value="1314SCY">13 & 14 Short Course Yards</option>
+            <option value="15SCY">15 & Up Short Course Yards</option>
+            <option value="LCM">Long Course Meters</option>
+          </select>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div id="show8SCY" class="myDiv">
+    <h3>8 & Under Short Course Yards</h3>
+    <table>
+      <tbody>
+        <thead>
+          <tr>
+            <th width="20%">Girls</th>
+            <th width="10%">Time</th>
+            <th width="10%">Date</th>
+            <th width="20%">Event</th>
+            <th width="20%">Boys</th>
+            <th width="10%">Time</th>
+            <th width="10%">Date</th>
+          </tr>
+        </thead>
+        <tr>
+          <td style="text-align:left;">Sophie Kommer</td>
+          <td>14.47</td>
+          <td>2/15/2020</td>
+          <td style="font-weight: bold; text-align:center;">25 Free</td>
+          <td style="text-align:left;">Brad Spencer</td>
+          <td>13.99</td>
+          <td>1/1/1985</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Avery Tack</td>
+          <td>32.45</td>
+          <td>3/17/2018</td>
+          <td style="font-weight: bold; text-align:center;">50 Free</td>
+          <td style="text-align:left;">Patrick Olmsted</td>
+          <td>30.88</td>
+          <td>2/23/2008</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Sophie Kommer</td>
+          <td>1:13.23</td>
+          <td>3/1/2020</td>
+          <td style="font-weight: bold; text-align:center;">100 Free</td>
+          <td style="text-align:left;">Patrick Olmstead</td>
+          <td>1:06.68</td>
+          <td>3/14/2008</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Tina Deneweth</td>
+          <td>16.64</td>
+          <td>1/1/1995</td>
+          <td style="font-weight: bold; text-align:center;">25 Back</td>
+          <td style="text-align:left;">Zachary Chen</td>
+          <td>16.79</td>
+          <td>3/18/2006</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Tina Deneweth</td>
+          <td>36.06</td>
+          <td>1/1/1995</td>
+          <td style="font-weight: bold; text-align:center;">50 Back</td>
+          <td style="text-align:left;">Zachary Chen</td>
+          <td>35.61</td>
+          <td>3/10/2006</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Kate Pallischeck</td>
+          <td>18.78</td>
+          <td>1/1/1985</td>
+          <td style="font-weight: bold; text-align:center;">25 Breast</td>
+          <td style="text-align:left;">Rudy Stonisch</td>
+          <td>18.76</td>
+          <td>2/19/2011</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Mary Baily</td>
+          <td>48.32</td>
+          <td>2/20/2022</td>
+          <td style="font-weight: bold; text-align:center;">50 Breast</td>
+          <td style="text-align:left;">David Wilson</td>
+          <td>39.86</td>
+          <td>1/1/1991</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Natalie Najarian</td>
+          <td>15.20</td>
+          <td>1/1/1987</td>
+          <td style="font-weight: bold; text-align:center;">25 Fly</td>
+          <td style="text-align:left;">Matt Parrish</td>
+          <td>15.11</td>
+          <td>1/1/1989</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Jaynie Pulte</td>
+          <td>36.55</td>
+          <td>2/9/2002</td>
+          <td style="font-weight: bold; text-align:center;">50 Fly</td>
+          <td style="text-align:left;">Matt Parrish</td>
+          <td>33.72</td>
+          <td>1/1/1989</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Amanda Bucklin</td>
+          <td>1:22.18</td>
+          <td>2/10/2001</td>
+          <td style="font-weight: bold; text-align:center;">100 IM</td>
+          <td style="text-align:left;">Drew Madigan</td>
+          <td>1:19.25</td>
+          <td>2/17/2018</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Stephanie Parsons <br>Jamie Allshouse <br>Carolyn Deighan <br>Mica Van
+            Slingerlandt </td>
+          <td>1:00.88</td>
+          <td>1/1/1985</td>
+          <td style="font-weight: bold; text-align:center;">100 Free Relay</td>
+          <td style="text-align:left;">Callum Wiggins <br>Jack Higgins <br>AJ Farner <br>Evan Tack</td>
+          <td>59.15</td>
+          <td>2/20/2016</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Kelly McGill <br>Sarah Hartman <br>Abigail Foley <br>Sara Johnson</td>
+          <td>1:09.84</td>
+          <td>1/1/1991</td>
+          <td style="font-weight: bold; text-align:center;">100 Medley Relay</td>
+          <td style="text-align:left;">Grey Schindler <br>Drew Madigan <br>Hullihen Quarrier <br>Oliver Grake</td>
+          <td>1:08.36</td>
+          <td>2/17/2018</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div id="show910SCY" class="myDiv">
+    <h3>9 & 10 Short Course Yards</h3>
+    <table>
+      <tbody>
+        <thead>
+          <tr>
+            <th width="20%">Girls</th>
+            <th width="10%">Time</th>
+            <th width="10%">Date</th>
+            <th width="20%">Event</th>
+            <th width="20%">Boys</th>
+            <th width="10%">Time</th>
+            <th width="10%">Date</th>
+          </tr>
+        </thead>
+        <tr>
+          <td style="text-align:left;">Lauren Matthews</td>
+          <td>26.48</td>
+          <td>2/22/2003</td>
+          <td style="font-weight: bold; text-align:center;">50 Free</td>
+          <td style="text-align:left;">Jack Higgins</td>
+          <td>26.43</td>
+          <td>3/16/2018</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Sydney Derkevorkian</td>
+          <td>58.46</td>
+          <td>3/13/2016</td>
+          <td style="font-weight: bold; text-align:center;">100 Free</td>
+          <td style="text-align:left;">Jack Higgins</td>
+          <td>58.44</td>
+          <td>3/18/2018</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Sydney Derkevorkian</td>
+          <td>2:07.36</td>
+          <td>3/12/2016</td>
+          <td style="font-weight: bold; text-align:center;">200 Free</td>
+          <td style="text-align:left;">Matt Parrish</td>
+          <td>2:07.80</td>
+          <td>1/1/1991</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Allie Russell</td>
+          <td>5:56.98</td>
+          <td>3/12/2010</td>
+          <td style="font-weight: bold; text-align:center;">500 Free</td>
+          <td style="text-align:left;">Bobby Powrie</td>
+          <td>5:41.59</td>
+          <td>3/6/2009</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Erin Madigan</td>
+          <td>12:59.25</td>
+          <td>1/12/2018</td>
+          <td style="font-weight: bold; text-align:center;">1000 Free</td>
+          <td style="text-align:left;">Ethan Schwab</td>
+          <td>12:49.02</td>
+          <td>2/12/2016</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Katie Minnich</td>
+          <td>30.21</td>
+          <td>3/18/2011</td>
+          <td style="font-weight: bold; text-align:center;">50 Back</td>
+          <td style="text-align:left;">Alexander Margherio</td>
+          <td>29.68</td>
+          <td>3/18/2011</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Sydney Derkevorkian</td>
+          <td>1:07.85</td>
+          <td>3/11/2016</td>
+          <td style="font-weight: bold; text-align:center;">100 Back</td>
+          <td style="text-align:left;">Alexander Margherio</td>
+          <td>1:04.92</td>
+          <td>3/11/2011</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Emily Ernst</td>
+          <td>33.67</td>
+          <td>1/1/1992</td>
+          <td style="font-weight: bold; text-align:center;">50 Breast</td>
+          <td style="text-align:left;">David Wilson</td>
+          <td>34.13</td>
+          <td>1/1/1992</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Emily Ernst</td>
+          <td>1:15.90</td>
+          <td>1/1/1992</td>
+          <td style="font-weight: bold; text-align:center;">100 Breast</td>
+          <td style="text-align:left;">Evan Tack</td>
+          <td>1:16.60</td>
+          <td>3/17/2018</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Lauren Matthews</td>
+          <td>28.57</td>
+          <td>3/21/2003</td>
+          <td style="font-weight: bold; text-align:center;">50 Fly</td>
+          <td style="text-align:left;">Matt Parrish</td>
+          <td>28.83</td>
+          <td>1/1/1991</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Samantha Clifford</td>
+          <td>1:06.79</td>
+          <td>3/13/2016</td>
+          <td style="font-weight: bold; text-align:center;">100 Fly</td>
+          <td style="text-align:left;">Matt Parrish</td>
+          <td>1:06.11</td>
+          <td>1/1/1991</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Lauren Matthews</td>
+          <td>1:06.81</td>
+          <td>3/21/2003</td>
+          <td style="font-weight: bold; text-align:center;">100 IM</td>
+          <td style="text-align:left;">AJ Farner</td>
+          <td>1:08.18</td>
+          <td>3/16/2018</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Eva Lehtonen</td>
+          <td>2:31.21</td>
+          <td>1/1/2002</td>
+          <td style="font-weight: bold; text-align:center;">200 IM</td>
+          <td style="text-align:left;">AJ Farner</td>
+          <td>2:24.49</td>
+          <td>3/18/2018</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Megan Evo <br>Lauren Buck <br>Meredith Magulak <br>Hannah Robinson </td>
+          <td>1:54.62</td>
+          <td>1/1/1998</td>
+          <td style="font-weight: bold; text-align:center;">200 Free Relay</td>
+          <td style="text-align:left;">AJ Farner <br>Ian Whan <br>Evan Tack <br>Jack Higgins</td>
+          <td>1:50.52</td>
+          <td>3/17/2018</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Marissa Thome <br>Gigi Hoppen <br>Jordan Murrell <br>Leighton Miotke</td>
+          <td>2:07.42</td>
+          <td>4/9/2013</td>
+          <td style="font-weight: bold; text-align:center;">200 Medley Relay</td>
+          <td style="text-align:left;">Sean Lu <br>Evan Tack <br>AJ Farner <br>Jack Higgins</td>
+          <td>2:07.22</td>
+          <td>3/18/2018</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div id="show1112SCY" class="myDiv">
+    <h3>11 & 12 Short Course Yards</h3>
+    <table>
+      <tbody>
+        <thead>
+          <tr>
+            <th width="20%">Girls</th>
+            <th width="10%">Time</th>
+            <th width="10%">Date</th>
+            <th width="20%">Event</th>
+            <th width="20%">Boys</th>
+            <th width="10%">Time</th>
+            <th width="10%">Date</th>
+          </tr>
+        </thead>
+        <tr>
+          <td style="text-align:left;">Nicole Pape</td>
+          <td>24.70</td>
+          <td>3/16/2012</td>
+          <td style="font-weight: bold; text-align:center;">50 Free</td>
+          <td style="text-align:left;">Paul Collins</td>
+          <td>23.47</td>
+          <td>3/21/2003</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Nicole Pape</td>
+          <td>53.31</td>
+          <td>3/16/2012</td>
+          <td style="font-weight: bold; text-align:center;">100 Free</td>
+          <td style="text-align:left;">Bobby Powrie</td>
+          <td>51.37</td>
+          <td>3/11/2011</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Sydney Derkevorkian</td>
+          <td>1:56.68</td>
+          <td>3/17/2018</td>
+          <td style="font-weight: bold; text-align:center;">200 Free</td>
+          <td style="text-align:left;">Bobby Powrie</td>
+          <td>1:52.87</td>
+          <td>3/11/2011</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Gwenyth Woodbury</td>
+          <td>5:15.68</td>
+          <td>3/18/2016</td>
+          <td style="font-weight: bold; text-align:center;">500 Free</td>
+          <td style="text-align:left;">Ethan Schwab</td>
+          <td>5:06.33</td>
+          <td>3/16/2018</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Eva Lehtonen </td>
+          <td>11:06.55</td>
+          <td>1/10/2004</td>
+          <td style="font-weight: bold; text-align:center;">1000 Free</td>
+          <td style="text-align:left;">Ethan Schwab</td>
+          <td>10:24.60</td>
+          <td>3/17/2018</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Megan Clifford</td>
+          <td>19.38.02</td>
+          <td>11/14/2015</td>
+          <td style="font-weight: bold; text-align:center;">1650 Free</td>
+          <td style="text-align:left;">Ethan Schwab</td>
+          <td>18:14.50</td>
+          <td>1/6/2018</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Katie Minnich</td>
+          <td>27.51</td>
+          <td>3/15/2013</td>
+          <td style="font-weight: bold; text-align:center;">50 Back</td>
+          <td style="text-align:left;">Emmett Knudsen</td>
+          <td>26.95</td>
+          <td>3/7/2020</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Katie Minnich</td>
+          <td>59.00</td>
+          <td>3/15/2013</td>
+          <td style="font-weight: bold; text-align:center;">100 Back</td>
+          <td style="text-align:left;">Emmett Knudsen</td>
+          <td>58.96</td>
+          <td>3/6/2020</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Katie Minnich</td>
+          <td>2:06.95</td>
+          <td>3/15/2013</td>
+          <td style="font-weight: bold; text-align:center;">200 Back</td>
+          <td style="text-align:left;">Oliver Cafferty</td>
+          <td>2:04.78</td>
+          <td>3/7/2014</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Allie Russel</td>
+          <td>31.60</td>
+          <td>3/9/2012</td>
+          <td style="font-weight: bold; text-align:center;">50 Breast</td>
+          <td style="text-align:left;">Paul Collins</td>
+          <td>29.68</td>
+          <td>3/21/2003</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Nicole Pape</td>
+          <td>1:07.40</td>
+          <td>3/16/2012</td>
+          <td style="font-weight: bold; text-align:center;">100 Breast</td>
+          <td style="text-align:left;">Paul Collins</td>
+          <td>1:05.66</td>
+          <td>3/21/2003</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Kelley Hassett</td>
+          <td>2:30.13</td>
+          <td>3/15/2019</td>
+          <td style="font-weight: bold; text-align:center;">200 Breast</td>
+          <td style="text-align:left;">Evan Tack</td>
+          <td>2:23.32</td>
+          <td>3/6/2020</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Eva Lehtonen</td>
+          <td>26.86</td>
+          <td>3/12/2004</td>
+          <td style="font-weight: bold; text-align:center;">50 Fly</td>
+          <td style="text-align:left;">Paul Collins</td>
+          <td>25.78</td>
+          <td>3/21/2003</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Eva Lehtonen</td>
+          <td>59.05</td>
+          <td>4/5/2004</td>
+          <td style="font-weight: bold; text-align:center;">100 Fly</td>
+          <td style="text-align:left;">Matt Parrish</td>
+          <td>57.44</td>
+          <td>1/1/1993</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Eva Lehtonen</td>
+          <td>2:10.91</td>
+          <td>3/12/2004</td>
+          <td style="font-weight: bold; text-align:center;">200 Fly</td>
+          <td style="text-align:left;">Mitch Buccalo</td>
+          <td>2:16.92</td>
+          <td>3/12/2010</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Nicole Pape</td>
+          <td>1:01.46</td>
+          <td>3/16/2012</td>
+          <td style="font-weight: bold; text-align:center;">100 IM</td>
+          <td style="text-align:left;">Paul Collins</td>
+          <td>58.50</td>
+          <td>3/21/2003</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Nicole Pape</td>
+          <td>2:10.97</td>
+          <td>3/16/2012</td>
+          <td style="font-weight: bold; text-align:center;">200 IM</td>
+          <td style="text-align:left;">Bobby Powrie</td>
+          <td>2:06.60</td>
+          <td>3/11/2011</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Eva Lehtonen</td>
+          <td>4:44.81</td>
+          <td>3/12/2004</td>
+          <td style="font-weight: bold; text-align:center;">400 IM</td>
+          <td style="text-align:left;">Angus MacDonald</td>
+          <td>4:30.94</td>
+          <td>3/17/2018</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Gwenyth Woodbury <br>Samantha Diaz <br>Meghan Threlkeld <br>Megan Clifford
+          <td>1:40.51</td>
+          <td>3/19/2016</td>
+          <td style="font-weight: bold; text-align:center;">200 Free Relay</td>
+          <td style="text-align:left;">Ian Whan <br>Evan Tack <br>Emmett Knudsen <br>Jack Higgins</td>
+          <td>1:36.67</td>
+          <td>3/7/2020</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Kat Blake <br>Gigi Hoppen <br>Samantha Diaz <br>Gwen Woodbury</td>
+          <td>1:55.08</td>
+          <td>3/22/2015</td>
+          <td style="font-weight: bold; text-align:center;">200 Medley Relay</td>
+          <td style="text-align:left;">Emmett Knudsen <br>Evan Tack <br>Sean Lu <br>Jack Higgins</td>
+          <td>1:49.21</td>
+          <td>3/8/2020</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div id="show1314SCY" class="myDiv">
+    <h3>13 & 14 Short Course Yards</h3>
+    <table>
+      <tbody>
+        <thead>
+          <tr>
+            <th width="20%">Girls</th>
+            <th width="10%">Time</th>
+            <th width="10%">Date</th>
+            <th width="20%">Event</th>
+            <th width="20%">Boys</th>
+            <th width="10%">Time</th>
+            <th width="10%">Date</th>
+          </tr>
+        </thead>
+        <tr>
+          <td style="text-align:left;">Nicole Pape</td>
+          <td>24.17</td>
+          <td>4/3/2013</td>
+          <td style="font-weight: bold; text-align:center;">50 Free</td>
+          <td style="text-align:left;">Dan Priestley</td>
+          <td>21.32</td>
+          <td>1/1/2002</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Gwenyth Woodbury</td>
+          <td>52.63</td>
+          <td>1/28/2017</td>
+          <td style="font-weight: bold; text-align:center;">100 Free</td>
+          <td style="text-align:left;">Evan Tack</td>
+          <td>46.60</td>
+          <td>3/13/2022</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Gwenyth Woodbury</td>
+          <td>1:53.18</td>
+          <td>2/12/2017</td>
+          <td style="font-weight: bold; text-align:center;">200 Free</td>
+          <td style="text-align:left;">Morgan Priestley</td>
+          <td>1:44.00</td>
+          <td>4/5/2005</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Camillie Rochaix</td>
+          <td>5:06.24</td>
+          <td>3/21/2014</td>
+          <td style="font-weight: bold; text-align:center;">500 Free</td>
+          <td style="text-align:left;">Morgan Priestley</td>
+          <td>4:38.88</td>
+          <td>4/5/2005</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Camillie Rochaix</td>
+          <td>10:40.44</td>
+          <td>3/21/2015</td>
+          <td style="font-weight: bold; text-align:center;">1000 Free</td>
+          <td style="text-align:left;">AJ Farner</td>
+          <td>9:45.48</td>
+          <td>3/27/2022</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Camillie Rochaix</td>
+          <td>17:55.78</td>
+          <td>3/22/2015</td>
+          <td style="font-weight: bold; text-align:center;">1650 Free</td>
+          <td style="text-align:left;">Ethan Schwab</td>
+          <td>16:22.03</td>
+          <td>1/24/2020</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Katie Minnich</td>
+          <td>56.07</td>
+          <td>3/22/2015</td>
+          <td style="font-weight: bold; text-align:center;">100 Back</td>
+          <td style="text-align:left;">Oliver Cafferty</td>
+          <td>51.53</td>
+          <td>4/6/2016</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Katie Minnich</td>
+          <td>1:59.71</td>
+          <td>3/20/2015</td>
+          <td style="font-weight: bold; text-align:center;">200 Back</td>
+          <td style="text-align:left;">Alexander Margherio</td>
+          <td>1:53.43</td>
+          <td>3/20/2015</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Nicole Pape</td>
+          <td>1:04.51</td>
+          <td>3/15/2013</td>
+          <td style="font-weight: bold; text-align:center;">100 Breast</td>
+          <td style="text-align:left;">Ethan Schwab</td>
+          <td>58.55</td>
+          <td>1/25/2020</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Megan Evo</td>
+          <td>2:21.08</td>
+          <td>1/1/2002</td>
+          <td style="font-weight: bold; text-align:center;">200 Breast</td>
+          <td style="text-align:left;">Evan Tack</td>
+          <td>2:07.17</td>
+          <td>3/13/2022</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Nicole Pape</td>
+          <td>57.80</td>
+          <td>4/3/2013</td>
+          <td style="font-weight: bold; text-align:center;">100 Fly</td>
+          <td style="text-align:left;">Alexander Margherio</td>
+          <td>52.34</td>
+          <td>3/31/2015</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Megan Clifford</td>
+          <td>2:07.50</td>
+          <td>3/18/2018</td>
+          <td style="font-weight: bold; text-align:center;">200 Fly</td>
+          <td style="text-align:left;">Mitch Buccalo</td>
+          <td>2:02.75</td>
+          <td>3/16/2012</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Sara Johnson</td>
+          <td>2:07.00</td>
+          <td>1/25/1997</td>
+          <td style="font-weight: bold; text-align:center;">200 IM</td>
+          <td style="text-align:left;">Angus MacDonald</td>
+          <td>1:56.51</td>
+          <td>1/4/2020</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Merrill Watzman</td>
+          <td>4:38.10</td>
+          <td>3/18/2011</td>
+          <td style="font-weight: bold; text-align:center;">400 IM</td>
+          <td style="text-align:left;">Angus MacDonald</td>
+          <td>4:12.11</td>
+          <td>1/5/2020</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Sydney Derkevorkian <br>Carly Burry <br>Madison Helmick <br>Samantha Clifford
+          </td>
+          <td>1:39.56</td>
+          <td>3/16/2019</td>
+          <td style="font-weight: bold; text-align:center;">200 Free Relay</td>
+          <td style="text-align:left;">Matt Yang <br>Colin Murphy <br>Alexander Margherio <br>Ryan Lawrence</td>
+          <td>1:30.80</td>
+          <td>3/21/2014</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Bella Vaughan <br>Kate Stanley <br>Samantha Clifford <br>Sydney Derkevorkian</td>
+          <td>1:49.54</td>
+          <td>3/17/2019</td>
+          <td style="font-weight: bold; text-align:center;">200 Medley Relay</td>
+          <td style="text-align:left;">Oliver Cafferty <br>Jake Farr <br>Iain Buckowinski <br>Nathan Randle</td>
+          <td>1:40.35</td>
+          <td>3/20/2016</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div id="show15SCY" class="myDiv">
+    <h3>15 & Up Short Course Yards</h3>
+    <table>
+      <tbody>
+        <thead>
+          <tr>
+            <th width="20%">Girls</th>
+            <th width="10%">Time</th>
+            <th width="10%">Date</th>
+            <th width="20%">Event</th>
+            <th width="20%">Boys</th>
+            <th width="10%">Time</th>
+            <th width="10%">Date</th>
+          </tr>
+        </thead>
+        <tr>
+          <td style="text-align:left;">Nikki Barczak</td>
+          <td>23.15</td>
+          <td>12/9/2010</td>
+          <td style="font-weight: bold; text-align:center;">50 Free</td>
+          <td style="text-align:left;">Dan Priestley</td>
+          <td>20.48</td>
+          <td>4/5/2005</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Nikki Barczak </td>
+          <td>49.56</td>
+          <td>12/9/2010</td>
+          <td style="font-weight: bold; text-align:center;">100 Free</td>
+          <td style="text-align:left;">Alexander Margherio</td>
+          <td>44.84</td>
+          <td>4/7/2017</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Samantha Clifford</td>
+          <td>1:49.63</td>
+          <td>3/30/2022</td>
+          <td style="font-weight: bold; text-align:center;">200 Free</td>
+          <td style="text-align:left;">Morgan Priestley</td>
+          <td>1:36.54</td>
+          <td>4/1/2008</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Samantha Clifford</td>
+          <td>4:55.40</td>
+          <td>3/31/2022</td>
+          <td style="font-weight: bold; text-align:center;">500 Free</td>
+          <td style="text-align:left;">Morgan Priestley</td>
+          <td>4:21.74</td>
+          <td>4/1/2008</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Madison Helmick</td>
+          <td>10:18.94</td>
+          <td>3/28/2022</td>
+          <td style="font-weight: bold; text-align:center;">1000 Free</td>
+          <td style="text-align:left;">Patrick Sheppell</td>
+          <td>9:23.55</td>
+          <td>4/5/2011</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Madison Helmick</td>
+          <td>17:20.98</td>
+          <td>1/28/2022</td>
+          <td style="font-weight: bold; text-align:center;">1650 Free</td>
+          <td style="text-align:left;">Patrick Sheppell</td>
+          <td>15:44.90</td>
+          <td>4/5/2011</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Katie Minnich</td>
+          <td>54.89</td>
+          <td>12/9/2015</td>
+          <td style="font-weight: bold; text-align:center;">100 Back</td>
+          <td style="text-align:left;">Christian Bouchillon</td>
+          <td>49.21</td>
+          <td>3/30/2022</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Katie Minnich</td>
+          <td>1:58.52</td>
+          <td>4/4/2018</td>
+          <td style="font-weight: bold; text-align:center;">200 Back</td>
+          <td style="text-align:left;">Drew Collins</td>
+          <td>1:47.98</td>
+          <td>4/3/2021</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Rachel Dekar</td>
+          <td>1:03.98</td>
+          <td>4/6/2009</td>
+          <td style="font-weight: bold; text-align:center;">100 Breast</td>
+          <td style="text-align:left;">Ethan Schwab</td>
+          <td>54.28</td>
+          <td>4/1/2022</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Megan Evo</td>
+          <td>2:19.68</td>
+          <td>4/14/2003</td>
+          <td style="font-weight: bold; text-align:center;">200 Breast</td>
+          <td style="text-align:left;">Ethan Schwab</td>
+          <td>1:57.21</td>
+          <td>3/29/2022</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Samantha Clifford</td>
+          <td>55.36</td>
+          <td>3/29/2022</td>
+          <td style="font-weight: bold; text-align:center;">100 Fly</td>
+          <td style="text-align:left;">Alexander Margherio</td>
+          <td>48.75</td>
+          <td>4/4/2018</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Megan Evo</td>
+          <td>2:04.34</td>
+          <td>4/5/2005</td>
+          <td style="font-weight: bold; text-align:center;">200 Fly</td>
+          <td style="text-align:left;">Allen Diao</td>
+          <td>1:53.84</td>
+          <td>4/7/2017</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Sara Johnson</td>
+          <td>2:02.62</td>
+          <td>1/1/2000</td>
+          <td style="font-weight: bold; text-align:center;">200 IM</td>
+          <td style="text-align:left;">Dan Priestley</td>
+          <td>1:50.17</td>
+          <td>4/5/2005</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Mica Van Slingerlandt</td>
+          <td>4:31.09</td>
+          <td>1/1/1992</td>
+          <td style="font-weight: bold; text-align:center;">400 IM</td>
+          <td style="text-align:left;">Angus MacDonald</td>
+          <td>3:57.52</td>
+          <td>3/30/2022</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Jaynie Pulte <br>Taylor Steffl <br>Maggie Pyett <br>Nikki Barczak</td>
+          <td>1:33.83</td>
+          <td>4/5/2011</td>
+          <td style="font-weight: bold; text-align:center;">200 Free Relay</td>
+          <td style="text-align:left;">Drew Collins <br>Ethan Schwab <br>Evan Tack <br>Charlie Bruce</td>
+          <td>1:22.36</td>
+          <td>3/28/2022</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Katherine Carl <br>Jaynie Pulte <br>Lauren Nichols <br>Nikki Barczak</td>
+          <td>3:27.39</td>
+          <td>4/6/2009</td>
+          <td style="font-weight: bold; text-align:center;">400 Free Relay</td>
+          <td style="text-align:left;">Oliver Cafferty <br>Alexander Margherio <br>Timonty Page <br>Ryan Lawrence</td>
+          <td>3:04.86</td>
+          <td>4/7/2017</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Katherine Carl <br>Megan Gegesky <br>Maggue Brannins <br>Nikki Barczak</td>
+          <td>7:34.65</td>
+          <td>4/6/2009</td>
+          <td style="font-weight: bold; text-align:center;">800 Free Relay</td>
+          <td style="text-align:left;">Oliver Cafferty <br>Alexander Margherio <br>Kaden Schwaiger <br>Ryan Lawrence
+          </td>
+          <td>6:51.51</td>
+          <td>4/6/2017</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Taylor Steffl <br>Rachel Dekar <br>Nikki Barczak <br>Lauren Nichols</td>
+          <td>1:44.63</td>
+          <td>4/6/2009</td>
+          <td style="font-weight: bold; text-align:center;">200 Medley Relay</td>
+          <td style="text-align:left;"> Christian Bouchillon <br>Ethan Schwab <br>Charlie Bruce <br>Drew Collins</td>
+          <td>1:31.04</td>
+          <td>3/30/2022</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Marissa Blumenthal <br>Rachel Dekar <br>Nikki Barczak <br>Lauren Nichols</td>
+          <td>3:48.46</td>
+          <td>4/6/2009</td>
+          <td style="font-weight: bold; text-align:center;">400 Medley Relay</td>
+          <td style="text-align:left;"> Drew Collins <br>Ethan Schwab <br>Cami Wilson <br>Charlie Bruce</td>
+          <td>3:19.29</td>
+          <td>3/29/2022</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div id="showLCM" class="myDiv">
+    <h3>Long Course Meters</h3>
+    <table>
+      <tbody>
+        <thead>
+          <tr>
+            <th width="20%">Girls</th>
+            <th width="10%">Time</th>
+            <th width="10%">Date</th>
+            <th width="20%">Event</th>
+            <th width="20%">Boys</th>
+            <th width="10%">Time</th>
+            <th width="10%">Date</th>
+          </tr>
+        </thead>
+        <tr>
+          <td style="text-align:left;">Lauren Nichols</td>
+          <td>26.69</td>
+          <td>8/1/2010</td>
+          <td style="font-weight: bold; text-align:center;">50 Free</td>
+          <td style="text-align:left;">Dan Priestley</td>
+          <td>24.20</td>
+          <td>8/1/03</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Nikki Barczak</td>
+          <td>58.66</td>
+          <td>8/1/2011</td>
+          <td style="font-weight: bold; text-align:center;">100 Free</td>
+          <td style="text-align:left;">Morgan Priestley</td>
+          <td>52.18</td>
+          <td>8/1/2008</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Samantha Clifford</td>
+          <td>2:10.74</td>
+          <td>8/11/2021</td>
+          <td style="font-weight: bold; text-align:center;">200 Free</td>
+          <td style="text-align:left;">Morgan Priestley</td>
+          <td>1:52.24</td>
+          <td>8/1/2008</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Nikki Barczak</td>
+          <td>4:36.34</td>
+          <td>8/1/2009</td>
+          <td style="font-weight: bold; text-align:center;">400 Free</td>
+          <td style="text-align:left;">Morgan Priestley</td>
+          <td>4:09.92</td>
+          <td>8/1/2008</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Camile Rochaix</td>
+          <td>9:39.41</td>
+          <td>8/1/2015</td>
+          <td style="font-weight: bold; text-align:center;">800 Free</td>
+          <td style="text-align:left;">Morgan Priestley</td>
+          <td>8:55.39</td>
+          <td>8/1/2005</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Madison Helmick</td>
+          <td>18:31.07</td>
+          <td>8/1/2021</td>
+          <td style="font-weight: bold; text-align:center;">1500 Free</td>
+          <td style="text-align:left;">Patrick Sheppell</td>
+          <td>16:35.47</td>
+          <td>8/1/2010</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Madison Helmick</td>
+          <td>32.39</td>
+          <td>8/1/2021</td>
+          <td style="font-weight: bold; text-align:center;">50 Back</td>
+          <td style="text-align:left;">Drew Collins</td>
+          <td>27.12</td>
+          <td>8/1/2021</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Katie Minnich</td>
+          <td>1:04.75</td>
+          <td>8/1/2016</td>
+          <td style="font-weight: bold; text-align:center;">100 Back</td>
+          <td style="text-align:left;">Oliver Cafferty</td>
+          <td>57.55</td>
+          <td>8/1/2017</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Katie Minnich</td>
+          <td>2:19.69</td>
+          <td>8/1/2016</td>
+          <td style="font-weight: bold; text-align:center;">200 Back</td>
+          <td style="text-align:left;">Angus MacDonald</td>
+          <td>2:08.75</td>
+          <td>8/10/2021</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Emma Dickhudt</td>
+          <td>35.74</td>
+          <td>8/1/2019</td>
+          <td style="font-weight: bold; text-align:center;">50 Breast</td>
+          <td style="text-align:left;">Ethan Schwab</td>
+          <td>29.73</td>
+          <td>8/1/2021</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Megan Evo</td>
+          <td>1:14.99</td>
+          <td>8/1/2002</td>
+          <td style="font-weight: bold; text-align:center;">100 Breast</td>
+          <td style="text-align:left;">Ethan Schwab</td>
+          <td>1:04.84</td>
+          <td>8/11/2021</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Megan Evo</td>
+          <td>2:43.88</td>
+          <td>8/1/2002</td>
+          <td style="font-weight: bold; text-align:center;">200 Breast</td>
+          <td style="text-align:left;">Ethan Schwab</td>
+          <td>2:18.49</td>
+          <td>8/13/2021</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Courtney Connolly</td>
+          <td>29.20</td>
+          <td>8/1/2018</td>
+          <td style="font-weight: bold; text-align:center;">50 Fly</td>
+          <td style="text-align:left;">Alexander Margherio</td>
+          <td>25.64</td>
+          <td>8/1/2015</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Courtney Connolly</td>
+          <td>1:05.00</td>
+          <td>8/1/2018</td>
+          <td style="font-weight: bold; text-align:center;">100 Fly</td>
+          <td style="text-align:left;">Alexander Margherio <br>Cami Wilson</td>
+          <td>57.35</td>
+          <td>8/1/2015 <br>8/13/2021</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Megan Clifford</td>
+          <td>2:22.68</td>
+          <td>8/1/2021</td>
+          <td style="font-weight: bold; text-align:center;">200 Fly</td>
+          <td style="text-align:left;">Mayer Krieger</td>
+          <td>2:14.37</td>
+          <td>7/16/2022</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Sara Johnson</td>
+          <td>2:24.14</td>
+          <td>8/1/2000</td>
+          <td style="font-weight: bold; text-align:center;">200 IM</td>
+          <td style="text-align:left;">Angus MacDonald</td>
+          <td>2:08.46</td>
+          <td>7/17/2022</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Julie Hintermeister</td>
+          <td>5:15.77</td>
+          <td>8/1/2004</td>
+          <td style="font-weight: bold; text-align:center;">400 IM</td>
+          <td style="text-align:left;">Angus MacDonald</td>
+          <td>4:32.08</td>
+          <td>7/15/2022</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;"></td>
+          <td></td>
+          <td></td>
+          <td style="font-weight: bold; text-align:center;">200 Free Relay</td>
+          <td style="text-align:left;">Timonty Page <br>Jake Farr <br>K. Schwaiger <br>Oliver Cafferty/td>
+          <td>1:41.79</td>
+          <td>8/1/2017</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Megan Clifford <br>Kate Stanley <br>Samantha Clifford <br>Madison Helmick</td>
+          <td>4:09.24</td>
+          <td>8/1/2019</td>
+          <td style="font-weight: bold; text-align:center;">400 Free Relay</td>
+          <td style="text-align:left;">Jack Higgins <br>Evan Tack <br>Ian Duncan <br>Angus MacDonald</td>
+          <td>3:38.86</td>
+          <td>7/15/2022</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Katherine Carl <br>Nikki Barczak <br>Lauren Nichols <br>A. Schena <br></td>
+          <td>9:04.57</td>
+          <td>8/1/2008</td>
+          <td style="font-weight: bold; text-align:center;">800 Free Relay</td>
+          <td style="text-align:left;">M. Threlkeld <br>Timonty Page <br>Jake Farr <br>Oliver Cafferty</td>
+          <td>8:04.48</td>
+          <td>8/1/2021</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Gwenyth Woodbury <br>A. Fassett <br>M. Peil <br>Megan Clifford</td>
+          <td>2:08.81</td>
+          <td>8/1/2017</td>
+          <td style="font-weight: bold; text-align:center;">200 Medley Relay</td>
+          <td style="text-align:left;">Drew Collins <br>Ethan Schwab <br>Cami Wilson <br>Angus MacDonald</td>
+          <td>1:45.44</td>
+          <td>8/10/2021</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Samantha Clifford <br>Megan Clifford <br>Kate Stanley <br>Madison Helmick</td>
+          <td>4:41.98</td>
+          <td>8/1/2019</td>
+          <td style="font-weight: bold; text-align:center;">400 Medley Relay</td>
+          <td style="text-align:left;">R. Lawrence <br>Alex Margherio <br>L. Kokubo <br>M. Threlkeld</td>
+          <td>4:07.14</td>
+          <td>8/1/2015</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</body>
+
+</html>
